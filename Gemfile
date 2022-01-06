@@ -50,3 +50,4 @@ gem 'dotenv-rails', groups: [:development, :test] #https://github.com/bkeepers/d
 gem 'rubocop-rails', require: false #https://github.com/rubocop/rubocop-rails
 
 
+gem 'omniauth-yahoo_auth' #https://github.com/karan-pathak/omniauth-yahoo_auth
