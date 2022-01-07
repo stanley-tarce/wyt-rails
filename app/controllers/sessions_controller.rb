@@ -1,10 +1,13 @@
 class SessionsController < ApplicationController
 
-    skip_before_action :verify_authenticity_token, only: :create
-
-    def custom
-      @user = User.find_or_create_from_auth_hash(auth_hash)
-      self.current_user = @user
+    def callback
+      # @user = User.find_or_create_from_auth_hash(auth_hash)
+      # self.current_user = @user
+      # p auth_hash
+      # p params.inspect.to_json
+      # p params[:code]
+      # p params[:state]
+      render json: {info: auth_hash, }, status: :ok
     end
   
     protected
