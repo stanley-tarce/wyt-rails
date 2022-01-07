@@ -1,0 +1,2 @@
+class SentPlayer < ApplicationRecord
+end
