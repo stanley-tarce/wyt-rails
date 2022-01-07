@@ -139,6 +139,9 @@ GEM
     omniauth-oauth2 (1.7.2)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    omniauth-rails_csrf_protection (1.0.0)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     omniauth-yahoo_auth (0.2.0)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.5)
@@ -253,6 +256,8 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   listen (~> 3.3)
+  omniauth
+  omniauth-rails_csrf_protection
   omniauth-yahoo_auth
   pg (~> 1.1)
   puma (~> 5.0)
