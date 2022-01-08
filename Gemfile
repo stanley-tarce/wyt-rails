@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -27,30 +29,33 @@ gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 5.0.0'
-  gem 'factory_bot_rails' # 
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rubocop-rspec', require: false #https://github.com/rubocop/rubocop-rspec
+  gem 'rubocop-rspec', require: false # https://github.com/rubocop/rubocop-rspec
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
 group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+# Newly-added Gems
 
-#Newly-added Gems
+gem 'blueprinter' # https://github.com/procore/blueprinter
+gem 'dotenv-rails', groups: %i[development test] # https://github.com/bkeepers/dotenv
+gem 'rubocop-rails', require: false # https://github.com/rubocop/rubocop-rails
 
-gem 'blueprinter' #https://github.com/procore/blueprinter
-gem 'dotenv-rails', groups: [:development, :test] #https://github.com/bkeepers/dotenv
-gem 'rubocop-rails', require: false #https://github.com/rubocop/rubocop-rails
+gem 'omniauth' # https://github.com/omniauth/omniauth
+gem 'omniauth-rails_csrf_protection' # https://github.com/cookpad/omniauth-rails_csrf_protection
+gem 'omniauth-yahoo_auth' # https://github.com/karan-pathak/omniauth-yahoo_auth
 
-
-gem 'omniauth-yahoo_auth' #https://github.com/karan-pathak/omniauth-yahoo_auth
-gem 'omniauth' #https://github.com/omniauth/omniauth
-gem 'omniauth-rails_csrf_protection' #https://github.com/cookpad/omniauth-rails_csrf_protection
-
+group :test do 
+  gem 'database_cleaner-active_record'
+  gem 'factory_bot_rails'
+end 
