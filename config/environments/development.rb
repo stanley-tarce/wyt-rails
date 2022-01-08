@@ -16,7 +16,8 @@ Rails.application.configure do
 
   # config.hosts << "devsite.com"
 #  config.hosts << "129d-152-32-104-193.ngrok.io"
- config.hosts << "d0b3-152-32-104-193.ngrok.io"
+ config.hosts << "6f60-152-32-104-193.ngrok.io"
+ config.hosts << "86cc-152-32-104-193.ngrok.io"
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
