@@ -1,7 +1,6 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
     provider :yahoo_auth, 
-    ENV['YAHOO_CLIENT_ID_STAN_V2'], 
-    ENV['YAHOO_CLIENT_SECRET_STAN_V2'],
-    redirect_uri: 'https://0f35-152-32-104-193.ngrok.io/auth/yahoo_auth/callback'
+    ENV['WYT_RAILS_CONSUMER_KEY'], 
+    ENV['WYT_RAILS_CONSUMER_SECRET']
   end 
 OmniAuth.config.allowed_request_methods = %i[get post]
