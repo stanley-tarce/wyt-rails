@@ -20,12 +20,10 @@ RSpec.describe Trade, type: :model do
     it '1. It should not create a Trade Model without a User Model' do
       trade = Trade.create
       expect(trade).to_not be_valid
-     
     end
     it '2. It should have an error message of "User must exist"' do
       trade = Trade.create
-      expect(trade.errors.full_messages).to include("User must exist")
+      expect(trade.errors.full_messages).to include('User must exist')
     end
-
   end
 end
