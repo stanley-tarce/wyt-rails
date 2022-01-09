@@ -1,5 +1,30 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ReceivedPlayer, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    @receivedPlayer = FactoryBot.create(:received_player)
+  end
+  context 'Valid Attributes' do
+    it '1. It should be valid with valid attributes' do
+      expect(@receivedPlayer).to be_valid
+    end
+    it '2. It should have a player_name attribute' do
+      expect(@receivedPlayer.player_name).to eq(ReceivedPlayer.first.player_name)
+    end
+    it '3. It should exist inside a trade model' do
+      expect(@receivedPlayer.trade).to eq(Trade.first)
+    end
+  end
+  context 'Invalid Attributes' do
+    it '1. It should not be able to create a model without a player' do
+      received_player = ReceivedPlayer.create(trade: Trade.first)
+      expect(received_player).to_not be_valid
+    end
+    it '2. It should not be able to create a model without existing inside a trade model' do
+      received_player = ReceivedPlayer.create(player_name: Faker::Name.name)
+      expect(received_player).to_not be_valid
+    end
+  end
 end
