@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Trade, type: :model do
@@ -5,16 +7,25 @@ RSpec.describe Trade, type: :model do
     @user = FactoryBot.create(:user)
     @trade = FactoryBot.create(:trade, user: @user)
   end
-  it "1. It should create a Trade Model with User Model" do
-    expect(@trade).to be_valid
+  context 'Valid Attributes' do
+    it '1. It should create a Trade Model' do
+      expect(@trade).to be_valid
+    end
+    it '2. It should exist inside a User Model' do
+      expect(@user.trades).to include(@trade)
+    end
   end
-  
-  it "2. It should not create a Trade Model without a User Model" do
-    trade = Trade.create()
-    expect(trade).to_not be_valid
-    expect(trade.errors.full_messages).to include("User must exist")
-  end
-  it "3. It should exist inside a User Model" do
-    expect(@user.trades).to include(@trade)
+
+  context  'Invalid Attributes' do
+    it '1. It should not create a Trade Model without a User Model' do
+      trade = Trade.create
+      expect(trade).to_not be_valid
+     
+    end
+    it '2. It should have an error message of "User must exist"' do
+      trade = Trade.create
+      expect(trade.errors.full_messages).to include("User must exist")
+    end
+
   end
 end
