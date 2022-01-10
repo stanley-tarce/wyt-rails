@@ -16,6 +16,9 @@ RSpec.describe SentPlayer, type: :model do
     it '3. It should exist inside a trade model' do
       expect(@sentPlayer.trade).to eq(Trade.first)
     end
+    it '4. It should have a user' do
+      expect(@sentPlayer.trade.league.user).to eq(User.first) 
+    end
   end
   context 'Invalid Attributes' do
     it '1. It should not be able to create a model without a player' do

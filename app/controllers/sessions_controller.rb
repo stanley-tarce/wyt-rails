@@ -2,21 +2,23 @@ class SessionsController < ApplicationController
 
     def callback
       if auth_hash
-        # @user = User.create_with(access_token: auth_hash['credentials']['token']).find_or_create_by(email: auth_hash['info']['email'])
         full_name = "#{auth_hash['info']['first_name']} #{auth_hash['info']['last_name']}"
         User.create_with(full_name: full_name).find_or_create_by(email: auth_hash['info']['email']).update(access_token: auth_hash['credentials']['token'])
-
-        #Alex, basically this will find the user first and if it can't find the user then it will create a new user with the full_name included. And then, it will update the access token for the user.  https://apidock.com/rails/v4.0.2/ActiveRecord/Relation/find_or_create_by
-        
-
-        # @user = User.find_or_create_by!(email: auth_hash['info']['email']).update!(access_token: auth_hash['info']['token'])
-        # @user['full_name'] == auth_hash['info']['first_name'] + ' ' + auth_hash['info']['last_name'] unless User.find_by(email: auth_hash['info']['email']) != nil
-        # self.current_user = @users
-        redirect_to '/'
+        create
       else 
         render json: { error: "error"}, status: 401
-      # render json: {info: auth_hash}, status: :ok
       end
+    end
+    def create
+      session['user_id'] = User.find_by_email(auth_hash['info']['email']).id
+      render json: { message: "User successfully logged in"}, status: :ok
+      redirect_to '/'
+    end
+    def delete
+      session['user_id'] = nil
+      current_user.update(access_token: nil, refresh_token: nil, expiry: nil) #remove access tokens from db
+      render json: { message: "User successfully logged out"}, status: :ok
+
     end
     protected
   
