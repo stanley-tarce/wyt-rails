@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :trade do
-    user
+    league
   end
 end

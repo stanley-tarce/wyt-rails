@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_08_100129) do
+ActiveRecord::Schema.define(version: 2022_01_10_072329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2022_01_08_100129) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["trade_id"], name: "index_comments_on_trade_id"
+  end
+
+  create_table "leagues", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "league_id"
+    t.string "league_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.uuid "user_id", null: false
+    t.index ["user_id"], name: "index_leagues_on_user_id"
   end
 
   create_table "received_players", force: :cascade do |t|
@@ -41,11 +50,19 @@ ActiveRecord::Schema.define(version: 2022_01_08_100129) do
     t.index ["trade_id"], name: "index_sent_players_on_trade_id"
   end
 
-  create_table "trades", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "user_id", null: false
+  create_table "stats", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "stat_id"
+    t.string "stat_name"
+    t.string "stat_display_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_trades_on_user_id"
+  end
+
+  create_table "trades", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.uuid "league_id", null: false
+    t.index ["league_id"], name: "index_trades_on_league_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -54,10 +71,13 @@ ActiveRecord::Schema.define(version: 2022_01_08_100129) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "access_token"
+    t.string "refresh_token"
+    t.string "expiry"
   end
 
   add_foreign_key "comments", "trades"
+  add_foreign_key "leagues", "users"
   add_foreign_key "received_players", "trades"
   add_foreign_key "sent_players", "trades"
-  add_foreign_key "trades", "users"
+  add_foreign_key "trades", "leagues"
 end

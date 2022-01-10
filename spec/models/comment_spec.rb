@@ -20,8 +20,10 @@ RSpec.describe Comment, type: :model do
       expect(@comment.trade).to eq(Comment.first.trade)
     end
     it '4. It Should have a user' do
-      userId = @comment.trade.user_id
-      expect(User.find(userId)).to eq(Comment.first.trade.user)
+      leagueId = @comment.trade.league_id
+      puts Comment.first.trade.league.user.email
+      p User.find(League.find(leagueId).user_id).email
+      expect(User.find(League.find(leagueId).user_id)).to eq(Comment.first.trade.league.user)
     end
   end
   context 'Invalid Attributes' do
