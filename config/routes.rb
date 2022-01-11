@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   namespace :api do 
     get '/teams', to: 'teams#index'
+    get '/leagues', to: 'teams#leagues'
+    get '/league', to: 'teams#league'
   end
 end
