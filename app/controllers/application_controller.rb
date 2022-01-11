@@ -1,34 +1,38 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::API
-    private
-    def current_user
-        token && User.find_by_access_token(token) ? User.find_by_access_token(token)  : nil
-    end
+  private
 
-    def user_authenticated?
-        true if current_user
-        false
-    end
+  def current_user
+    token && User.find_by_access_token(token) ? User.find_by_access_token(token) : nil
+  end
 
-    def require_token
-        if request.headers['Authorization'] == nil 
-            render json: { error: 'Unauthorized', status: 401 }, status: 401
-        else 
-            @access_token = request.headers['Authorization'].gsub("Bearer ","")
-        end
-    end
+  def user_authenticated?
+    return true if current_user
 
-    def token
-        request.headers['Authorization'].gsub("Bearer ","")
-    end
+    false
+  end
 
-    def check_token_expired?
-        current_user.refresh_token_if_expired
+  def require_token
+    if request.headers['Authorization'].nil?
+      render json: { error: 'Unauthorized', status: 401 }, status: 401
+    else
+      @access_token = request.headers['Authorization'].gsub('Bearer ', '')
     end
+  end
 
-    def authenticate_user!
-        unless user_authenticated?
-            return render json: { error: 'Unauthorized', status: 401 }, status: 401
-        end
-    end
-    #will run before_action :check_token_expired? and before_action :authenticate_user! 
+  def token
+    return request.headers['Authorization'].gsub('Bearer ', '') if request.headers['Authorization']
+
+    nil
+  end
+
+  def check_token_expired?
+    current_user.refresh_token_if_expired
+  end
+
+  def authenticate_user!
+    return render json: { error: 'Unauthorized', status: 401 }, status: 401 unless user_authenticated?
+  end
+  # will run before_action :check_token_expired? and before_action :authenticate_user!
 end
