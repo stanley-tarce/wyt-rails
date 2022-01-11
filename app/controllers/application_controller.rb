@@ -24,4 +24,11 @@ class ApplicationController < ActionController::API
     def check_token_expired?
         current_user.refresh_token_if_expired
     end
+
+    def authenticate_user!
+        unless user_authenticated?
+            return render json: { error: 'Unauthorized', status: 401 }, status: 401
+        end
+    end
+    #will run before_action :check_token_expired? and before_action :authenticate_user! 
 end
