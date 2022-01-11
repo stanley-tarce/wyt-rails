@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::API
   private
+
   def current_user
     token && User.find_by_access_token(token) ? User.find_by_access_token(token) : nil
   end
