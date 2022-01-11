@@ -4,9 +4,10 @@ module Api
 
         def index
         teams = Yahoo::Client.teams(require_token)
-    
         render json: teams
         end
+
+        private
 
         def leagues
           leagues = Yahoo::Client.leagues(@access_token)
