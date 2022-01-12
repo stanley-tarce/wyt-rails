@@ -3,9 +3,9 @@
 class ApplicationController < ActionController::API
   private
 
-  def current_user
+  def current_user(token)
     token && User.find_by_access_token(token) ? User.find_by_access_token(token) : nil
-  end
+  end 
 
   def user_authenticated?
     token && User.find_by_access_token(token)
@@ -27,12 +27,19 @@ class ApplicationController < ActionController::API
   def set_response_headers
     response.set_header('access_token', current_user.access_token)
   end
-
-
-  def check_token_expired?
-    if current_user.refresh_token_if_expired
-      request.headers['Authorization'] = "Bearer #{current_user.access_token}"   
-    end
+  # def use_current_token
+  #   if check_token_expired_v2?
+  #     new_access_token = current_user.refresh_token_if_expired[:access_token]
+  #     return new_access_token
+  #   else  
+  #     return current_user.access_token
+  #   end
+  # end
+  def check_token_expired
+     current_user.refresh_token_if_expired   
+  end
+   def check_token_expired_v2?
+    Time.at(current_user.expiry.to_i) < Time.now
   end
 
   def authenticate_user!
