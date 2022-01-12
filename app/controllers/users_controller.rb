@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :check_token_expired?, only:[:index]
+  # before_action :set_response_headers, only:[:index]
+  prepend_before_action :authenticate_user!, only:[:index]
   # GET /users
   def index
     @users = User.all

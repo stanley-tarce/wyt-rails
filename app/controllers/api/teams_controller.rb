@@ -1,6 +1,8 @@
 module Api
     class TeamsController < ApplicationController
         before_action :require_token
+        before_action :check_token_expired?, only:[:index]
+        before_action :authenticate_user!, only:[:index]
 
         def index
         teams = Yahoo::Client.teams(require_token)
@@ -22,13 +24,7 @@ module Api
         end
 
         private
-        def require_token
-          if request.headers['Authorization'] == nil 
-            render json: { error: 'Unauthorized', status: 401 }, status: 401
-          else 
-            @access_token = request.headers['Authorization'].gsub("Bearer ","")
-          end
-        end
+
 
         def user_params
           params.permit(:league_key)

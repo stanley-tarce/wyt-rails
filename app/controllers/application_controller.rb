@@ -8,9 +8,7 @@ class ApplicationController < ActionController::API
   end
 
   def user_authenticated?
-    return true if current_user
-
-    false
+    token && User.find_by_access_token(token)
   end
 
   def require_token
@@ -22,17 +20,24 @@ class ApplicationController < ActionController::API
   end
 
   def token
-    return request.headers['Authorization'].gsub('Bearer ', '') if request.headers['Authorization']
-
-    nil
+     return request.headers['Authorization'].gsub('Bearer ', '') if request.headers['Authorization']
+     nil
   end
 
+  def set_response_headers
+    response.set_header('access_token', current_user.access_token)
+  end
+
+
   def check_token_expired?
-    current_user.refresh_token_if_expired
+    if current_user.refresh_token_if_expired
+      request.headers['Authorization'] = "Bearer #{current_user.access_token}"   
+    end
   end
 
   def authenticate_user!
-    return render json: { error: 'Unauthorized', status: 401 }, status: 401 unless user_authenticated?
+    return render json: { error: 'No Access Token', status: 401 }, status: 401 if request.headers['Authorization'].nil?
+    return render json: { error: "Invalid Token"}, status: 401 unless user_authenticated?
   end
   # will run before_action :check_token_expired? and before_action :authenticate_user!
 end
