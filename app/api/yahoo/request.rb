@@ -15,7 +15,8 @@ module Yahoo
       )
       { code: result.code, status: 'Success', data: JSON.parse(result.body) }
     rescue RestClient::ExceptionWithResponse => e
-      { code: e.http_code, status: e.message, data: Errors.map(e.http_code) }
+      parsed_e = JSON.parse(e.response)
+      { code: e.http_code, status: e.message, data: parsed_e['error']['description'] }
     end
   end
 end

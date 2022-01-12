@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   get 'auth/yahoo_auth/callback', to: 'sessions#callback'
 
   namespace :api do 
-    get '/teams', to: 'teams#index'
     get '/leagues', to: 'teams#leagues'
     get '/league', to: 'teams#league'
+    get '/players', to: 'teams#players'
+    get '/teams', to: 'teams#teams'
+    get '/stats', to: 'teams#stats'
   end
 end
