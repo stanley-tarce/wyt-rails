@@ -1,10 +1,38 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::API
-    private
-    def current_user
-        @current_user ||= User.find(session[:user_id]) if session[:user_id] 
+  private
+
+  def current_user
+    token && User.find_by_access_token(token) ? User.find_by_access_token(token) : nil
+  end
+
+  def user_authenticated?
+    return true if current_user
+
+    false
+  end
+
+  def require_token
+    if request.headers['Authorization'].nil?
+      render json: { error: 'Unauthorized', status: 401 }, status: 401
+    else
+      @access_token = request.headers['Authorization'].gsub('Bearer ', '')
     end
-    def authenticate_user
-        true if User.find(session[:user_id])
-        false
-    end
+  end
+
+  def token
+    return request.headers['Authorization'].gsub('Bearer ', '') if request.headers['Authorization']
+
+    nil
+  end
+
+  def check_token_expired?
+    current_user.refresh_token_if_expired
+  end
+
+  def authenticate_user!
+    return render json: { error: 'Unauthorized', status: 401 }, status: 401 unless user_authenticated?
+  end
+  # will run before_action :check_token_expired? and before_action :authenticate_user!
 end

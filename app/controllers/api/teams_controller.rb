@@ -2,12 +2,6 @@ module Api
     class TeamsController < ApplicationController
         before_action :require_token
 
-        # def index
-        # teams = Yahoo::Client.teams(require_token)
-    
-        # render json: teams
-        # end
-
         def leagues
           leagues = Yahoo::Client.leagues(@access_token)
       
