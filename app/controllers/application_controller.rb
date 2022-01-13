@@ -3,9 +3,14 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
   include ActionController::RequestForgeryProtection
+  before_action :set_csrf_cookie
   protect_from_forgery with: :null_session
 
   private
+
+  def set_csrf_cookie
+    cookies["CSRF-TOKEN"] = form_authenticity_token
+  end
 
   def current_user
     cookie && Session.find_by(token: cookies.signed[:access_token2]) ?  Session.find_by(token: cookies.signed[:access_token2]).user : nil
