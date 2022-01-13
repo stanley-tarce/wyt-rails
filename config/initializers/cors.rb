@@ -9,7 +9,7 @@ origin = Rails.env == 'development' ? '*' : 'https://stock-app-react.vercel.app/
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins origin
+    origins '*'
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
