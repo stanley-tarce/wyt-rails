@@ -9,9 +9,9 @@ origin = Rails.env == 'development' ? '*' : 'https://wyt-rails.herokuapp.com'
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins origin
+    origins '*'
     resource '*',
-      headers: :access_token,
+      headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
