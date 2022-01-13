@@ -3,8 +3,7 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
   include ActionController::RequestForgeryProtection
-  skip_before_action :verify_authenticity_token
-  # protect_from_forgery with: :null_session
+  protect_from_forgery with: :null_session
 
   private
 
