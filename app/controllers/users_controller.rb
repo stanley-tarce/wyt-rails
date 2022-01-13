@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     #   puts "Cookie Found"
     #   puts cookies.signed[:access_token]
     # end
-    cookies[:access_token2] = {value: User.first.access_token, expires: 72.hour, domain: 'https://stock-app-react.vercel.app/' }
+    cookies[:access_token2] = {value: User.first.access_token, expires: 72.hour, domain: 'vercel.app' }
     render json: { message: "User successfully logged in"}, status: :ok
   end
   def cookie
