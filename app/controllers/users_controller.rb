@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     # puts cookies.signed[:access_token2]
     # cookies.signed[:access_token2] = {value: User.first.access_token, expires: 72.hour }
     # cookies.delete(:access_token)
-    cookies.signed[:access_token2] = {value: User.first.access_token, expires: 72.hour, domain: 'stock-app-react.vercel.app' }
+    cookies.signed[:access_token2] = {value: User.first.access_token, expires: 72.hour, domain: 'herokuapp.com' }
     render json: { message: "User successfully logged in"}, status: :ok
   end
   def cookie
