@@ -22,6 +22,9 @@ class UsersController < ApplicationController
     cookies[:access_token2] = {value: User.first.access_token, expires: 72.hour }
     render json: { message: "User successfully logged in"}, status: :ok
   end
+  def cookie
+    render json: cookies[:access_token2]
+  end
 
   private
 
