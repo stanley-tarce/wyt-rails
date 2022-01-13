@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :check_token, only: [:index]
+  # before_action :check_token, only: [:index]
 
-  prepend_before_action :authenticate_user!, only: [:index]
+  # prepend_before_action :authenticate_user!, only: [:index]
 
   def index
     # puts current_user.inspect
-    @users = User.all
     # puts cookies.signed[:access_token2]
     # cookies.signed[:access_token2] = {value: User.first.access_token, expires: 72.hour }
     # cookies.delete(:access_token)
@@ -20,8 +19,8 @@ class UsersController < ApplicationController
     #   puts "Cookie Found"
     #   puts cookies.signed[:access_token]
     # end
-    render json: cookies.signed[:access_token2]
-    # render json: @users
+    cookies[:access_token2] = {value: User.first.access_token, expires: 72.hour }
+    render json: { message: "User successfully logged in"}, status: :ok
   end
 
   private

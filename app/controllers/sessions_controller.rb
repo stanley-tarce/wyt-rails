@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
         Session.create(user:User.find_by(email: auth_hash['info']['email']), token: auth_hash['credentials']['token'])
         token = {access_token: auth_hash['credentials']['token'], refresh_token: auth_hash['credentials']['refresh_token'], expiry: auth_hash['credentials']['expires_at']} #save access token to cookie
         # cookies.signed[:access_token] = {value: auth_hash['credentials']['token'], expires: 72.hour}
-        redirect_to '/'
+        redirect_to 'http://localhost:3000/'
         
       else 
         redirect_to 'www.front-end-url.com', alert: 'Unable to sign in with Yahoo.'
