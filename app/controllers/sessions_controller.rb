@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
         User.create_with(full_name: full_name).find_or_create_by(email: auth_hash['info']['email']).update(access_token: auth_hash['credentials']['token'], refresh_token: auth_hash['credentials']['refresh_token'], expiry: auth_hash['credentials']['expires_at'])
         Session.create(user:User.find_by(email: auth_hash['info']['email']), token: auth_hash['credentials']['token'])
         token = {access_token: auth_hash['credentials']['token'], refresh_token: auth_hash['credentials']['refresh_token'], expiry: auth_hash['credentials']['expires_at']} #save access token to cookie
-        cookies.signed[:access_token] = {value: auth_hash['credentials']['token'], expires: 72.hour, domain: 'stock-app-react.vercel.app' }
+        cookies.signed[:access_token] = {value: auth_hash['credentials']['token'], expires: 72.hour, domain: 'https://stock-app-react.vercel.app' }
         redirect_to 'https://stock-app-react.vercel.app/'
         
       else 
