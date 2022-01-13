@@ -15,6 +15,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
  
   config.hosts << "a58d-136-158-0-147.ngrok.io"
+  config.hosts << "4bd0-152-32-104-193.ngrok.io"
   config.hosts << "b552-152-32-104-193.ngrok.io"
   config.hosts << "86cc-152-32-104-193.ngrok.io"
   config.hosts << "0f35-152-32-104-193.ngrok.io"

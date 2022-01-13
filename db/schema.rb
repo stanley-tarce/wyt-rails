@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_072329) do
+ActiveRecord::Schema.define(version: 2022_01_12_122219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 2022_01_10_072329) do
     t.index ["trade_id"], name: "index_sent_players_on_trade_id"
   end
 
+  create_table "sessions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "user_id", null: false
+    t.string "token"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_sessions_on_user_id"
+  end
+
   create_table "stats", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "stat_id"
     t.string "stat_name"
@@ -79,5 +87,6 @@ ActiveRecord::Schema.define(version: 2022_01_10_072329) do
   add_foreign_key "leagues", "users"
   add_foreign_key "received_players", "trades"
   add_foreign_key "sent_players", "trades"
+  add_foreign_key "sessions", "users"
   add_foreign_key "trades", "leagues"
 end

@@ -61,3 +61,5 @@ group :test do
 end 
 
 gem 'rest-client'
+gem 'cgi'
+gem 'rails_same_site_cookie'

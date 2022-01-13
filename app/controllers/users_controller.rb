@@ -1,52 +1,30 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
-  before_action :check_token_expired?, only:[:index]
-  # before_action :set_response_headers, only:[:index]
-  prepend_before_action :authenticate_user!, only:[:index]
-  # GET /users
+  before_action :check_token, only: [:index]
+
+  prepend_before_action :authenticate_user!, only: [:index]
+
   def index
+    # puts current_user.inspect
     @users = User.all
-
-    render json: @users
-  end
-
-  # GET /users/1
-  def show
-    render json: @user
-  end
-
-  # POST /users
-  def create
-    @user = User.new(user_params)
-
-    if @user.save
-      render json: @user, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /users/1
-  def update
-    if @user.update(user_params)
-      render json: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /users/1
-  def destroy
-    @user.destroy
+    # puts cookies.signed[:access_token2]
+    # cookies.signed[:access_token2] = {value: User.first.access_token, expires: 72.hour }
+    # cookies.delete(:access_token)
+    # cookie_value = request.headers['Cookie'].split('=')[1].split('--').first
+    # verify_and_decrypt(cookie_value)
+    # cookie_value = CGI::unescape(cookie_value)
+    # cookie_payload = JSON.parse Base64.decode64(cookie_value)
+    # puts Base64.decode64 cookie_payload['_rails']['message']
+    # if cookies.signed[:access_token]
+    #   puts "Cookie Found"
+    #   puts cookies.signed[:access_token]
+    # end
+    render json: cookies.signed[:access_token2]
+    # render json: @users
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:string, :string)
-    end
+
 end
