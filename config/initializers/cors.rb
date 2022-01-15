@@ -4,12 +4,12 @@
 # Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.
 
 # Read more: https://github.com/cyu/rack-cors
-origin = Rails.env == 'development' ? '*' : 'https://stock-app-react.vercel.app/'
+origin = Rails.env == 'development' ? '*' : '*' #change frontend url here
 
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins  '*'
+    origins  origin
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
