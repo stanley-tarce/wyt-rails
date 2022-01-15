@@ -1,22 +1,24 @@
 # frozen_string_literal: true
 
-class ApplicationController < ActionController::AP I
-  include ActionController::Cookies
+class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
-  skip_before_action :verify_authenticity_token
+  # prepend_before_action :check_token
+  # before_action :authenticate_user!
+  # append_before_action :set_response_header
   # protect_from_forgery with: :null_session
+  # Four Main Methods
 
   private
 
   def current_user
-    cookie && Session.find_by(token: cookies.signed[:access_token2]) ?  Session.find_by(token: cookies.signed[:access_token2]).user : nil
+    token && Session.find_by(token: token) ?  Session.find_by(token: token).user : nil
   end
 
   def user_authenticated?
-    cookie && Session.find_by(token: cookies.signed[:access_token2]) 
+    current_user.present? 
   end
 
-  def require_token
+  def require_token # Can call or not call this method
     if request.headers['Authorization'].nil?
       render json: { error: 'Unauthorized', status: 401 }, status: 401
     else
@@ -24,24 +26,20 @@ class ApplicationController < ActionController::AP I
     end
   end
 
-  def token
+  def updated_token
     return current_user.access_token if current_user
 
     nil
   end
 
-  def cookie
-    return cookies.signed[:access_token2] if cookies.signed[:access_token2]
-
+  def token
+    return request.headers['Authorization'].gsub('Bearer ', '') if request.headers['Authorization']
     nil
   end
 
   def check_token
     if token_expired?
-      puts "Token has expired"
-      cookies.signed[:access_token2] = {value: current_user.refresh_token_if_expired, expires: 72.hour, }
-    else
-      puts "Token hasn't expired! #{(current_user.expiry.to_i - Time.now.to_i)/60} minutes left"
+      return current_user.refresh_token_if_expired
     end
   end
 
@@ -50,6 +48,9 @@ class ApplicationController < ActionController::AP I
     return true if expiry < Time.now
 
     false
+  end
+  def set_response_header
+    response.headers['Authorization'] = current_user.access_token
   end
 
   def authenticate_user!

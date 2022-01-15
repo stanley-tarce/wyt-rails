@@ -2,7 +2,7 @@
 
 module Yahoo
   class Refresh
-    def self.refresh(body)
+    def self.call(body)
       result = RestClient::Request.execute(method: 'post', url: 'https://api.login.yahoo.com/oauth2/get_token', headers: {
                                              'Content-Type': 'application/x-www-form-urlencoded'
                                            }, payload: body)
