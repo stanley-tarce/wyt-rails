@@ -1,8 +1,6 @@
 module Api
     class TeamsController < ApplicationController
-        # before_action :require_token
-        # before_action :check_token_expired?, only:[:index]
-        # before_action :authenticate_user!, only:[:index]
+
         before_action :check_token #Order 
         prepend_before_action :authenticate_user!
         append_before_action :set_response_header
@@ -28,7 +26,6 @@ module Api
 
         def teams
           teams = Yahoo::Client.teams_in_league(updated_token, user_params[:league_key])
-          params.inspect
           if teams[:code] != 200
             return render json: { error: 'Invalid League Key' }, status: 400
           else

@@ -8,12 +8,14 @@ module Yahoo
             if response[:code] == 200
                 resp_league_teams = response[:data]['fantasy_content']['users']['0']['user'][1]['games']['0']['game'][1]['teams']
                 league_teams = []
-                for i in (0...resp_league_teams['count']) do
-                    league_teams << {
-                        team_key: resp_league_teams[i.to_s]['team'][0][0]['team_key'],
-                        team_name: resp_league_teams[i.to_s]['team'][0][2]['name'],
-                        logo_url: resp_league_teams[i.to_s]['team'][0][5]['team_logos'][0]['team_logo']['url']
-                    }
+                for i in 0...resp_league_teams['count'].to_i do
+                        if resp_league_teams[i.to_s]['team'].dig(0,0,'team_key')
+                            league_teams << {
+                                team_key: resp_league_teams[i.to_s]['team'][0][0]['team_key'],
+                                team_name: resp_league_teams[i.to_s]['team'][0][2]['name'],
+                                logo_url: resp_league_teams[i.to_s]['team'][0][5]['team_logos'][0]['team_logo']['url']
+                            }
+                        end
                 end
                 return { code: response[:code], response: response[:status], data: {teams: league_teams } }
             else

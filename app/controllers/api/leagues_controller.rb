@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 module Api
   class LeaguesController < ApplicationController
     before_action :check_token # Order
