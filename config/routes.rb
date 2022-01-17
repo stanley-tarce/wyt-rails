@@ -9,10 +9,13 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index'
   get '/cookie', to: 'users#cookie'
   namespace :api do 
-    get '/leagues', to: 'teams#leagues'
-    get '/league', to: 'teams#league'
-    get '/players', to: 'teams#players'
-    get '/teams', to: 'teams#teams'
+    # get '/leagues', to: 'teams#leagues'
+    # get '/league', to: 'teams#league'
+    # get '/players', to: 'teams#players'
+    # get '/teams', to: 'teams#teams'
     get '/stats', to: 'teams#stats'
+    get '/trades', to: 'trades#index'
+    get '/leagues', to: 'leagues#index'
+
   end
 end
