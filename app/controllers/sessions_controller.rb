@@ -4,10 +4,8 @@ class SessionsController < ApplicationController
         full_name = "#{auth_hash['info']['first_name']} #{auth_hash['info']['last_name']}"
         User.create_with(full_name: full_name).find_or_create_by(email: auth_hash['info']['email']).update(access_token: auth_hash['credentials']['token'], refresh_token: auth_hash['credentials']['refresh_token'], expiry: auth_hash['credentials']['expires_at'])
         Session.create(user:User.find_by(email: auth_hash['info']['email']), token: auth_hash['credentials']['token'])
-        cookies.signed[:access_token] = {value: auth_hash['credentials']['token'], expires: 72.hour, domain: '.herokuapp.com' }
+        redirect_to ''
         # Redirect to frontend in herokuapp with token included
-
-        
       else 
         redirect_to 'www.front-end-url.com', alert: 'Unable to sign in with Yahoo.'
       end

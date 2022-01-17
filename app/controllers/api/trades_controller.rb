@@ -2,22 +2,60 @@
 
 module Api
   class TradesController < ApplicationController
-    before_action :check_token # Order
     prepend_before_action :authenticate_user!
+    before_action :check_token # Order
     append_before_action :set_response_header
-    protect_from_forgery with: :null_session
+    # protect_from_forgery with: :null_session
     def index
-      league = Yahoo::Client.league(updated_token, user_params[:league_key]) 
-      @trades = current_user.leagues.find_by(league_id: user_params[:league_key]).trades if current_user.leagues.find_by(league_id: user_params[:league_key])
-      leagues_array = []
-      if @trades.present?
-        leagues_array << { league_key: league[:data][:league][:league_key],
-                           league_name: league[:data][:league][:league_name], num_teams: league[:data][:league][:num_teams],scoring_type: league[:data][:league][:scoring_type], trades: @trades }
+      if !(trades.zero?)
+        trade_container = []
+        trades.each do |trade|
+          players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
+          player_stats = Yahoo::Client.player_stats(updated_token, trade.league.league_id, players_array.join(','))
+          sent_player_array = []
+          received_player_array = []
+          trade.sent_players.each do |player|
+            sent_player_array << { player_key: player.player_key, player_name: player.player_name, stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0] }
+          end
+          trade.received_players.each do |player|
+            received_player_array << { player_key: player.player_key, player_name: player.player_name, stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key}[0]}
+          end
+          trade_container << { id: trade.id, team_id: trade.team_id, team_name: trade.team_name, sent_players: sent_player_array, received_players: received_player_array }
+        end
+        render json: trade_container, status: :ok
       else
-        leagues_array << { league_key: league[:data][:league][:league_key],
-                           league_name: league[:data][:league][:league_name], num_teams: league[:data][:league][:num_teams],scoring_type: league[:data][:league][:scoring_type], trades: 'No Trades Found' }
+        render json: trades, status: :ok
       end
-      render json: leagues_array, status: :ok
+    end
+
+    def show
+      render json: trade, status: :ok
+    end
+
+    def create
+      current_user.leagues.find_by_league_id(user_params[:league_key]).trades.create(trade_params)
+      trade = Trade.find_by(league_id: user_params[:league_key])
+      players_to_send = JSON.parse params[:players_to_send]
+      players_to_receive = JSON.parse params[:players_to_receive]
+
+        players_to_send.each do |player|
+        trade.sent_players.create(player_key: player[:player_key], player_name: player[:player_name])
+      end
+      players_to_receive.each do |player|
+        trade.received_players.create(player_key: player[:player_key], player_name: player[:player_name])
+      end
+      render json: {message: "Trade Successful"}, status: :ok
+    end
+
+    private
+    def trades
+      current_user.leagues.find_by_league_id(user_params[:league_key]).trades
+    end
+    def trade
+      current_user.leagues.find_by_league_id(user_params[:league_key]).trades.(params[:id])
+    end
+    def trade_params
+      params.require(:trade).permit(:team_id, :team_name)
     end
   end
 end
