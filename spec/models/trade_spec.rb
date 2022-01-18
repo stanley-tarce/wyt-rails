@@ -15,7 +15,7 @@ RSpec.describe Trade, type: :model do
     it '2. It should exist inside a League Model' do
       expect(@league.trades).to include(@trade)
     end
-    it '2. It should exist inside a User Model' do
+    it '3. It should exist inside a User Model' do
       expect(@user.leagues.first.trades).to include(@trade)
     end
   end
@@ -25,7 +25,7 @@ RSpec.describe Trade, type: :model do
       trade = Trade.create
       expect(trade).to_not be_valid
     end
-    it '2. It should have an error message of "User must exist"' do
+    it '2. It should have an error message of "League must exist"' do
       trade = Trade.create
       expect(trade.errors.full_messages).to include('League must exist')
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_17_150132) do
+ActiveRecord::Schema.define(version: 2022_01_18_070020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -26,10 +26,12 @@ ActiveRecord::Schema.define(version: 2022_01_17_150132) do
   end
 
   create_table "leagues", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "league_id"
+    t.string "league_key"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "user_id", null: false
+    t.string "team_name"
+    t.string "team_key"
     t.index ["user_id"], name: "index_leagues_on_user_id"
   end
 
@@ -72,7 +74,7 @@ ActiveRecord::Schema.define(version: 2022_01_17_150132) do
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "league_id", null: false
     t.string "team_name"
-    t.string "team_id"
+    t.string "team_key"
     t.index ["league_id"], name: "index_trades_on_league_id"
   end
 

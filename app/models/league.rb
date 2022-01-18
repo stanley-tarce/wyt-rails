@@ -2,6 +2,8 @@
 
 class League < ApplicationRecord
   belongs_to :user
-  has_many :trades
-  validates :league_id, presence: true, uniqueness: true
+  has_many :trades, dependent: :destroy
+  validates :league_key, presence: true, uniqueness: true
+  validates :team_name, presence: true
+  validates :team_key, presence: true
 end
