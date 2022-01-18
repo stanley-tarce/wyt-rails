@@ -32,11 +32,11 @@ module Api
           end
         end
 
-        # def stats
-        #   player_stats = Yahoo::Client.player_stats(updated_token, user_params[:league_key], user_params[:player_keys])
+        def stats
+          player_stats = Yahoo::Client.player_stats(updated_token, user_params[:league_key], user_params[:player_keys])
       
-        #   render json: player_stats
-        # end
+          render json: player_stats
+        end
 
         def roster_with_stats
           roster = Yahoo::Client.players(updated_token, user_params[:team_key])[:data][:players]

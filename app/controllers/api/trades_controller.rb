@@ -29,26 +29,6 @@ module Api
       render json: out, status: :ok
       rescue ActiveRecord::RecordNotFound
         render json: {message: "Trade Not Found"}, status: 404
-
-      #   if trades.length != 0
-      #   trade_container = []
-      #   trades.each do |trade|
-      #     players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
-      #     player_stats = Yahoo::Client.player_stats(updated_token, trade.league.league_key, players_array.join(','))
-      #     sent_player_array = []
-      #     received_player_array = []
-      #     trade.sent_players.each do |player|
-      #       sent_player_array << { player_key: player.player_key, player_name: player.player_name, stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0] }
-      #     end
-      #     trade.received_players.each do |player|
-      #       received_player_array << { player_key: player.player_key, player_name: player.player_name, stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key}[0]}
-      #     end
-      #     trade_container << { id: trade.id, team_key: trade.team_key, team_name: trade.team_name, sent_players: sent_player_array, received_players: received_player_array }
-      #   end
-      #   render json: trade_container, status: :ok
-      # else
-      #   render json: trades, status: :ok
-      # end
     end
 
     def create #Specifiy Content-Type: application/json then pass it as array
