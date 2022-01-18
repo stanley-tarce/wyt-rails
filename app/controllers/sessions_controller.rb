@@ -1,22 +1,19 @@
 class SessionsController < ApplicationController
+    before_action :check_token, only: [:delete]
+    prepend_before_action :authenticate_user!, only: [:delete]
     def callback
       if auth_hash
         full_name = "#{auth_hash['info']['first_name']} #{auth_hash['info']['last_name']}"
         User.create_with(full_name: full_name).find_or_create_by(email: auth_hash['info']['email']).update(access_token: auth_hash['credentials']['token'], refresh_token: auth_hash['credentials']['refresh_token'], expiry: auth_hash['credentials']['expires_at'])
         Session.create(user:User.find_by(email: auth_hash['info']['email']), token: auth_hash['credentials']['token'])
-        cookies.signed[:access_token] = {value: auth_hash['credentials']['token'], expires: 72.hour, domain: '.herokuapp.com' }
+        redirect_to "http://localhost:3000/callback?token=#{auth_hash['credentials']['token']}"  #Alex send token here
+        # Base64.encode64(token)
         # Redirect to frontend in herokuapp with token included
-
-        
-      else 
-        redirect_to 'www.front-end-url.com', alert: 'Unable to sign in with Yahoo.'
       end
     end
     def delete
-
       Session.find_by_token(token).user.sessions.destroy_all
       User.find_by_access_token(token).update(access_token: nil, refresh_token: nil, expiry: nil)
-      cookies.delete(:access_token) #remove access token from cookie
       render json: { message: "User successfully logged out"}, status: :ok
 
     end

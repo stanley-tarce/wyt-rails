@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-    has_many :leagues
+    has_many :leagues, dependent: :destroy
     validates :email, presence: true, uniqueness: true
     has_many :sessions
     def refresh_token_if_expired

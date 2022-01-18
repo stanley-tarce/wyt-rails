@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class Trade < ApplicationRecord
-  has_many :received_players
-  has_many :sent_players
-  has_many :comments
+  has_many :received_players, dependent: :destroy
+  has_many :sent_players, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  validates :team_name, presence: true
+  validates :team_key, presence: true 
   belongs_to :league
 end

@@ -2,10 +2,7 @@
 
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
-  # prepend_before_action :check_token
-  # before_action :authenticate_user!
-  # append_before_action :set_response_header
-  # protect_from_forgery with: :null_session
+
   # Four Main Methods
 
   private
@@ -54,8 +51,11 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate_user!
-    return render json: { error: 'No Access Token' }, status: 401 if cookies.signed[:access_token2].nil?
+    return render json: { error: 'No Access Token' }, status: 401 if token.nil?
     return render json: { error: 'Invalid Token' }, status: 401 unless user_authenticated?
+  end
+  def user_params
+    params.permit(:league_key, :team_key, :player_keys)
   end
   # will run before_action :check_token_expired? and before_action :authenticate_user!
 end

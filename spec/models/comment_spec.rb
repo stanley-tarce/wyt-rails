@@ -21,8 +21,6 @@ RSpec.describe Comment, type: :model do
     end
     it '4. It Should have a user' do
       leagueId = @comment.trade.league_id
-      puts Comment.first.trade.league.user.email
-      p User.find(League.find(leagueId).user_id).email
       expect(User.find(League.find(leagueId).user_id)).to eq(Comment.first.trade.league.user)
     end
   end

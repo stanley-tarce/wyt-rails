@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_12_122219) do
+ActiveRecord::Schema.define(version: 2022_01_18_070020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(version: 2022_01_12_122219) do
   end
 
   create_table "leagues", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "league_id"
-    t.string "league_name"
+    t.string "league_key"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "user_id", null: false
+    t.string "team_name"
+    t.string "team_key"
     t.index ["user_id"], name: "index_leagues_on_user_id"
   end
 
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_01_12_122219) do
     t.uuid "trade_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "player_key"
     t.index ["trade_id"], name: "index_received_players_on_trade_id"
   end
 
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 2022_01_12_122219) do
     t.uuid "trade_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "player_key"
     t.index ["trade_id"], name: "index_sent_players_on_trade_id"
   end
 
@@ -70,6 +73,8 @@ ActiveRecord::Schema.define(version: 2022_01_12_122219) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.uuid "league_id", null: false
+    t.string "team_name"
+    t.string "team_key"
     t.index ["league_id"], name: "index_trades_on_league_id"
   end
 
