@@ -77,6 +77,7 @@ class ApplicationController < ActionController::API
     false
   end
   def check_token_expiry_from_trade_params
+    params.inspect
     if trade_param_token_expired? 
       return current_user_from_trade_params.refresh_token_from_trade_params
     end
