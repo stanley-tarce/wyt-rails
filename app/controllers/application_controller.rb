@@ -59,7 +59,7 @@ class ApplicationController < ActionController::API
   end
 
   def get_token_from_trade_params
-    Trade.find(params[:trade_id]).league.user.access_token
+    Trade.find_by(id: params[:trade_id]).league.user.access_token 
   end
 
   def current_user_from_trade_params
