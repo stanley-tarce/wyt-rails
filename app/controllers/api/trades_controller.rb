@@ -2,19 +2,20 @@
 
 module Api
   class TradesController < ApplicationController
-    prepend_before_action :authenticate_user!
-    before_action :check_token # Order
-    append_before_action :set_response_header
+    prepend_before_action :authenticate_user!, only: [:index, :create]
+    before_action :check_token, only: [:index, :create] # Order
+    append_before_action :set_response_header,only: [:index, :create]
+    before_action :check_token_expiry_from_trade_params, only: [:show]
     # protect_from_forgery with: :null_session
     def index
       render json: trades, status: :ok
     end
 
     def show
-      user_roster = Yahoo::Client.players(updated_token,  trade.league.team_key)
-      totrade_roster = Yahoo::Client.players(updated_token, trade.team_key)
+      user_roster = Yahoo::Client.players(updated_token_from_trade_params,  trade.league.team_key)
+      totrade_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.team_key)
       players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
-      player_stats = Yahoo::Client.player_stats(updated_token, trade.league.league_key, players_array.join(","))
+      player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, players_array.join(","))
       players_to_send = []
       players_to_receive = []
       trade.sent_players.each do |player|
