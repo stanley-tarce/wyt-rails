@@ -3,7 +3,7 @@ module Api
   class LeaguesController < ApplicationController
     before_action :check_token # Order
     prepend_before_action :authenticate_user!
-    append_before_action :set_response_header
+    # append_before_action :set_response_header
     protect_from_forgery with: :null_session
     def index
       leagues = Yahoo::Client.leagues(updated_token)
