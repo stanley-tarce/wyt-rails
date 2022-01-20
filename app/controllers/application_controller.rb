@@ -3,7 +3,6 @@
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
 
-  # Four Main Methods
 
   private
 
