@@ -58,7 +58,7 @@ module Api
         players_to_receive = params[:players_to_receive].class == Array ? params[:players_to_receive] : JSON.parse(params  [:players_to_receive])
       if players_to_send.present? && players_to_receive.present?
         trade.sent_players.destroy_all
-        trade.received_players.destroy_al
+        trade.received_players.destroy_all
           players_to_send.each do |player|
             trade.sent_players.create(player_key: player[:player_key], player_name: player[:player_name])
           end
