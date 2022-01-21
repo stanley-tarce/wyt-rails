@@ -56,7 +56,7 @@ module Api
     def update
         players_to_send = params[:players_to_send].class == Array ? params[:players_to_send] : JSON.parse(params[:players_to_send])
         players_to_receive = params[:players_to_receive].class == Array ? params[:players_to_receive] : JSON.parse(params  [:players_to_receive])
-      if players_to_sent.present? && players_to_receive.present?
+      if players_to_send.present? && players_to_receive.present?
         trade.sent_players.destroy_all
         trade.received_players.destroy_al
           players_to_send.each do |player|
