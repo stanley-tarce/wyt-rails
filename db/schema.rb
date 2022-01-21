@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_18_070020) do
+ActiveRecord::Schema.define(version: 2022_01_21_113126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2022_01_18_070020) do
     t.string "access_token"
     t.string "refresh_token"
     t.string "expiry"
+    t.string "image"
   end
 
   add_foreign_key "comments", "trades"

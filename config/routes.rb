@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'auth/yahoo_auth/callback', to: 'sessions#callback'
   get 'auth/yahoo_auth/logout', to: 'sessions#delete' #Logout #! NEED: Auth Token in Headers
+  get 'user', to: 'users#show'
   namespace :api do 
     # get '/leagues', to: 'teams#leagues'
     # get '/league', to: 'teams#league'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
     post '/create_trade', to: 'trades#create' #Create Trade #! NEED: team_name, team_key, players_to_send(Array with  keys player_name, player_key), players_to_receive(Array with keys player_name, player_key), league_key in query params
     get '/trades/:trade_id', to: 'trades#show' #Show Specific Trade #! NEED: trade_id in url params 
     patch '/trades/:trade_id', to: 'trades#update' #Update Specific Trade #! NEED: trade_id in url params
-    delete '/trades/:trade_id', to: 'trades#destroy' #Delete Specific Trade #! NEED: trade_id in url params
+    delete '/trades/:trade_id', to: 'trades#delete' #Delete Specific Trade #! NEED: trade_id in url params
     get '/trades/:trade_id/comments', to: 'comments#index' #Comments #! NEED: ALL trade_id in url params
     get '/trades/:trade_id/comments/:comment_id', to: 'comments#show'
     post '/trades/:trade_id/comments', to: 'comments#create'
