@@ -54,16 +54,16 @@ module Api
     end
 
     def update
-      trade.sent_players.destroy_all
-      trade.received_players.destroy_all
-      if trade.update(trade_params) 
-         players_to_send = params[:players_to_send].class == Array ? params[:players_to_send] : JSON.parse(params[:players_to_send])
+        players_to_send = params[:players_to_send].class == Array ? params[:players_to_send] : JSON.parse(params[:players_to_send])
         players_to_receive = params[:players_to_receive].class == Array ? params[:players_to_receive] : JSON.parse(params  [:players_to_receive])
+      if players_to_sent.present? && players_to_receive.present?
+        trade.sent_players.destroy_all
+        trade.received_players.destroy_al
           players_to_send.each do |player|
-            Trade.find_by(league_id: League.find_by(league_key: user_params[:league_key])).sent_players.create(player_key: player[:player_key], player_name: player[:player_name])
+            trade.sent_players.create(player_key: player[:player_key], player_name: player[:player_name])
           end
           players_to_receive.each do |player|
-            Trade.find_by(league_id: League.find_by(league_key: user_params[:league_key])).received_players.create(player_key: player[:player_key], player_name: player[:player_name])
+            trade.received_players.create(player_key: player[:player_key], player_name: player[:player_name])
           end
           render json: {message: "Trade Updated"}, status: :ok
         else
