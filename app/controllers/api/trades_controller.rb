@@ -6,7 +6,6 @@ module Api
     before_action :check_token, only: [:index, :create] # Order
     append_before_action :set_response_header,only: [:index, :create]
     before_action :check_token_expiry_from_trade_params, only: [:show]
-    # protect_from_forgery with: :null_session
     def index
       render json: trades, status: :ok
     end
@@ -32,6 +31,7 @@ module Api
         render json: {message: "Trade Not Found"}, status: 404
     end
 
+
     def create #Specifiy Content-Type: application/json then pass it as array
       trade = Trade.new(league: League.find_by(league_key: user_params[:league_key]), team_key: trade_params[:team_key], team_name: trade_params[:team_name])
       players_to_send = params[:players_to_send].class == Array ? params[:players_to_send] : JSON.parse(params[:players_to_send])
@@ -51,6 +51,30 @@ module Api
       render json: {error: "Trade Failed"}, status: 400
     rescue ActionController::ParameterMissing
       render json: {error: "Missing Parameter"}, status: 400
+    end
+
+    def update
+      if trade.update(trade_params) && trade.sent_players.destroy_all && trade.received_players.destroy_all
+         players_to_send = params[:players_to_send].class == Array ? params[:players_to_send] : JSON.parse(params[:players_to_send])
+        players_to_receive = params[:players_to_receive].class == Array ? params[:players_to_receive] : JSON.parse(params  [:players_to_receive])
+          players_to_send.each do |player|
+            Trade.find_by(league_id: League.find_by(league_key: user_params[:league_key])).sent_players.create(player_key: player[:player_key], player_name: player[:player_name])
+          end
+          players_to_receive.each do |player|
+            Trade.find_by(league_id: League.find_by(league_key: user_params[:league_key])).received_players.create(player_key: player[:player_key], player_name: player[:player_name])
+          end
+          render json: {message: "Trade Updated"}, status: :ok
+        else
+          render json: {message: "Trade Update Failed"}, status: 400
+      end
+    end 
+
+    def delete 
+      if trade.destroy
+        render json: {message: "Trade Deleted"}, status: :ok
+      else
+        render json: {message: "Trade Delete Failed"}, status: 400
+      end
     end
 
     private
