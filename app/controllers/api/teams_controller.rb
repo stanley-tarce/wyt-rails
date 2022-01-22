@@ -28,7 +28,7 @@ module Api
           if teams[:code] != 200
             return render json: { error: 'Invalid League Key' }, status: 400
           else
-            return render json: teams
+            return render json: teams[:data][:teams], status: :ok
           end
         end
 
@@ -51,7 +51,9 @@ module Api
             roster_list << { player_key: player[:player_key], player_name: player[:player_name], player_team_full: player[:player_team_full],player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0] }
           end
           rosters =  { roster: roster_list }
-          render json: rosters
+          render json: rosters, status: :ok
+        rescue TypeError 
+          render json: { error: 'Unavailable to Fetch Roster'}, status: 400
         end 
         private
     end
