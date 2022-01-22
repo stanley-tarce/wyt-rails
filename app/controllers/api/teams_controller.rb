@@ -28,7 +28,7 @@ module Api
           if teams[:code] != 200
             return render json: { error: 'Invalid League Key' }, status: 400
           else
-            return render json: teams[:data]['teams'], status: :ok
+            return render json: teams[:data][:league_teams], status: :ok
           end
         end
 
