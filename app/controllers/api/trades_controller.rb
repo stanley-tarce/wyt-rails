@@ -5,8 +5,7 @@ module Api
     prepend_before_action :authenticate_user!, only: [:index, :create]
     before_action :check_token, only: [:index, :create] # Order
     append_before_action :set_response_header,only: [:index, :create]
-    before_action :check_token_expiry_from_trade_params, only: [:show]
-    append_before_action :show_token_if_user, only: [:show]
+    before_action :show_token_if_user, only: [:show]
     def index
       render json: trades, status: :ok
     end
