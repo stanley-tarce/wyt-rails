@@ -39,6 +39,7 @@ module Api
         end
 
         def roster_with_stats
+          params.inspect
           roster = Yahoo::Client.players(updated_token, user_params[:team_key])[:data][:players]
           roster_list = [] #Whole Roster with stats
           player_keys = [] #List of player_keys
