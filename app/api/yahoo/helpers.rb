@@ -40,11 +40,12 @@ module Yahoo
         def self.get_average(games_played, stat)
             gp = games_played.to_f
             if stat.include? "/"
+                return " - / - " if gp.zero?
                 arr = stat.split "/"
-                "#{ (arr[0].to_f / gp).round(2) if not nil else '-' } / #{ (arr[1].to_f / gp).round(2) }"
+                "#{ (arr[0].to_f / gp).round(2) } / #{ (arr[1].to_f / gp).round(2) }"
             else
-                "#{ (stat.to_f / gp).round(2) if not nil else '-' }"
-
+                return " - " if gp.zero?
+                "#{ (stat.to_f / gp).round(2) }"
             end
         end
     end
