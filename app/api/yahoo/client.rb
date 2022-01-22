@@ -5,6 +5,7 @@ module Yahoo
         #Returns list of leagues user is currently in for the year
         def self.leagues(access_token)
             response = Request.call('get', '/users;use_login=1/games;game_keys=nba/teams?format=json', access_token)
+            p response
             if response[:code] == 200
                 resp_league_teams = response[:data]['fantasy_content']['users']['0']['user'][1]['games']['0']['game'][1]['teams']
                 league_teams = []
