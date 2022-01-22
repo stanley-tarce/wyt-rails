@@ -48,7 +48,7 @@ module Api
           end
           player_stats = Yahoo::Client.player_stats(updated_token, user_params[:league_key], player_keys.join(","))
           roster.each do |player|
-            roster_list << { player_key: player[:player_key], player_name: player[:player_name], player_team_full: player[:player_team_full],player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0].except(:player_key) }
+            roster_list << { player_key: player[:player_key], player_name: player[:player_name], player_team_full: player[:player_team_full],player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0].except('player_key') }
           end
           rosters =  { roster: roster_list }
           render json: rosters, status: :ok
