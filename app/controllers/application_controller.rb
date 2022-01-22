@@ -81,6 +81,12 @@ class ApplicationController < ActionController::API
       return current_user_from_trade_params.refresh_token_from_trade_params
     end
   end
+
+  def show_token_if_user
+    if token.present? 
+      return set_response_header
+    end
+  end
   
   
   # will run before_action :check_token_expired? and before_action :authenticate_user!
