@@ -41,9 +41,9 @@ module Yahoo
             gp = games_played.to_f
             if stat.include? "/"
                 arr = stat.split "/"
-                "#{ (arr[0].to_f / gp).round(2) } / #{ (arr[1].to_f / gp).round(2) }"
+                "#{ (arr[0].to_f / gp).round(2) if not nil else '-' } / #{ (arr[1].to_f / gp).round(2) }"
             else
-                "#{ (stat.to_f / gp).round(2) }"
+                "#{ (stat.to_f / gp).round(2) if not nil else '-' }"
 
             end
         end
