@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   def refresh_token_from_trade_params
     refresh
+    Session.create(user: self, token: access_token)
   end
 
   def refresh_token_if_expired
