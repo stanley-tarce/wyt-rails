@@ -53,17 +53,7 @@ module Api
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
                                 player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: {
           'GP' => stat['GP'],
-          'FGM/A' => stat['FGM/A'],
-          'FG%' => stat['FG%'],
-          'FTM/A' => stat['FTM/A'],
-          'FT%' => stat['FT%'],
-          '3PTM' => stat['3PTM'],
-          'PTS' => stat['PTS'],
-          'REB' => stat['REB'],
-          'AST' => stat['AST'],
-          'ST' => stat['ST'],
-          'BLK' => stat['BLK'],
-          'TO' => stat['TO']
+
         } }
       end
 
