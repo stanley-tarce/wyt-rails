@@ -30,10 +30,10 @@ module Api
        player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, roster_keys.join(","))
 
       user_roster[:data][:players].each do |player|
-        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0]}
+        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions],player_image: player[:player_image], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0]}
       end
       totrade_roster[:data][:players].each do |player|
-        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0]}
+        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions],player_image: player[:player_image], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0]}
       end
       
       trade.sent_players.each do |player|
