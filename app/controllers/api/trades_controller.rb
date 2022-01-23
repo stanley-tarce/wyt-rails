@@ -29,7 +29,7 @@ module Api
       end
        player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, roster_keys.join(","))
       trade.sent_players.each do |player|
-        stat = player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0]
+        stat = player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player.player_key }[0]
         roster = user_roster[:data][:players].select {|roster| roster[:player_key] == player.player_key }[0] 
         players_to_send << { player_name: player.player_name, player_key: player.player_key, player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: {
           "GP"=> stat['GP'],
@@ -47,7 +47,7 @@ module Api
         }}
       end
       trade.received_players.each do |player|
-        stat = player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0]
+        stat = player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player.player_key }[0]
         roster = totrade_roster[:data][:players].select {|roster| roster[:player_key] == player.player_key }[0]
         players_to_receive << { player_name: player.player_name, player_key: player.player_key, player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: {
           "GP" => stat['GP'],
