@@ -34,9 +34,7 @@ module Api
         players_to_send << { player_name: player.player_name, player_key: player.player_key,
                              player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: {
           'GP' => stat['GP'],
-          'FGM/A' => stat['FGM/A'],
-          'FG%' => stat['FG%'],
-          'FTM/A' => stat['FTM/A'],
+
 
         } }
       end
@@ -46,9 +44,7 @@ module Api
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
                                 player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: {
           'GP' => stat['GP'],
-          'FGM/A' => stat['FGM/A'],
-          'FG%' => stat['FG%'],
-          'FTM/A' => stat['FTM/A'],
+
 
         } }
       end
@@ -59,9 +55,7 @@ module Api
         stat = player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: {
           'GP' => stat['GP'],
-          'FGM/A' => stat['FGM/A'],
-          'FG%' => stat['FG%'],
-          'FTM/A' => stat['FTM/A'],
+
 
         } }
       end
@@ -71,9 +65,7 @@ module Api
         stat = player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full:   player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: {
           'GP' => stat['GP'],
-          'FGM/A' => stat['FGM/A'],
-          'FG%' => stat['FG%'],
-          'FTM/A' => stat['FTM/A'],
+
 
         } }
       end
