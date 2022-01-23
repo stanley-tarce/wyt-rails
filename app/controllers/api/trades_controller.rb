@@ -33,7 +33,7 @@ module Api
         user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0].except('player_key')}
       end
       totrade_roster[:data][:players].each do |player|
-        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0].except('player_key')}
+        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player[:player_key] }[0].nil?}
       end
       
       trade.sent_players.each do |player|
