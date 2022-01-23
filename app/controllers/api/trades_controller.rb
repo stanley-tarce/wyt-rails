@@ -30,19 +30,19 @@ module Api
        player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, roster_keys.join(","))
 
       user_roster[:data][:players].each do |player|
-        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key]}[0]}
+        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key]}[0].except('player_key')}
       end
       totrade_roster[:data][:players].each do |player|
-        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key]}[0]}
+        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_stats: player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key]}[0].except('player_key')}
       end
       
       trade.sent_players.each do |player|
         roster = user_roster[:data][:players].select {|roster| roster[:player_key] == player.player_key }[0] 
-        players_to_send << { player_name: player.player_name, player_key: player.player_key, player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player.player_key }[0]}
+        players_to_send << { player_name: player.player_name, player_key: player.player_key, player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player.player_key }[0].except('player_key')}
       end
       trade.received_players.each do |player|
         roster = totrade_roster[:data][:players].select {|roster| roster[:player_key] == player.player_key }[0]
-        players_to_receive << { player_name: player.player_name, player_key: player.player_key, player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player.player_key}[0]}
+        players_to_receive << { player_name: player.player_name, player_key: player.player_key, player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: player_stats[:data][:player_stats].select{ |stat| stat['player_key'] == player.player_key}[0].except('player_key')}
       end
       out = { id: trade.id, user_team_name: trade.league.team_name, user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosterss: user_other_roster, totrade_other_rosters: totrade_other_roster }
       render json: out, status: :ok
