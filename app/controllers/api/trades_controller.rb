@@ -69,6 +69,7 @@ module Api
 
     # Specifiy Content-Type: application/json then pass it as array
     def create
+      params.inspect
       trade = Trade.new(league: League.find_by(league_key: user_params[:league_key]),
                         team_key: trade_params[:team_key], team_name: trade_params[:team_name])
       players_to_send = params[:players_to_send].instance_of?(Array) ? params[:players_to_send] : JSON.parse(params[:players_to_send])
