@@ -13,7 +13,8 @@ module Api
     def show
       user_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.league.team_key)
       totrade_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.team_key)
-      roster_keys = []
+      user_roster_keys = []
+      user_other_roster_keys = []
       players_to_send = []
       players_to_receive = []
       user_other_roster = []
@@ -21,22 +22,24 @@ module Api
       players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
 
       user_roster[:data][:players].each do |player|
-        roster_keys << player[:player_key].to_s
+        user_roster_keys << player[:player_key].to_s
       end
       totrade_roster[:data][:players].each do |player|
-        roster_keys << player[:player_key].to_s
+        user_other_roster_keys << player[:player_key].to_s
       end
       puts roster_keys.join(',')
-      player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
-                                                roster_keys.join(','))
+      puts roster_keys.join(',')
+      user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
+                                                user_roster_keys.join(','))
+      other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
       trade.sent_players.each do |player|
-        stat1 =  player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
+        stat1 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         roster = user_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
         players_to_send << { player_name: player.player_name, player_key: player.player_key,
                              player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat1.except('player_key') }
       end
       trade.received_players.each do |player|
-        stat2 = player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
+        stat2 = other_user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         roster = totrade_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
                                 player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat2.except('player_key') }
@@ -45,13 +48,13 @@ module Api
       user_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
 
-        stat3 =  player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
+        stat3 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: stat3.except('player_key') }
       end
       totrade_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
 
-        stat4 = player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
+        stat4 = other_user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         # puts "****************  old   #{stat4}"
         clean_stat4 = stat4.except('player_key') rescue stat4
         # puts "****************     #{clean_stat4}"
