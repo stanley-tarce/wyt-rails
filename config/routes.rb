@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'auth/yahoo_auth/callback', to: 'sessions#callback'
-  get 'auth/yahoo_auth/logout', to: 'sessions#delete' #Logout #! NEED: Auth Token in Headers
+  delete 'auth/yahoo_auth/logout', to: 'sessions#delete' #Logout #! NEED: Auth Token in Headers
   get 'user', to: 'users#show'
   namespace :api do 
     # get '/leagues', to: 'teams#leagues'
