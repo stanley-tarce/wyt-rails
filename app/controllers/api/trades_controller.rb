@@ -46,7 +46,7 @@ module Api
         next if players_array.include? player[:player_key].to_s
 
         stat3 =  player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
-        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: stat3 }
+        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: stat3.except('player_key') }
       end
       totrade_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
