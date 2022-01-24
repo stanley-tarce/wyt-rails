@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
       end
     end
     def delete
+      current_user.update(access_token: nil, refresh_token: nil, expiry: nil)
       Session.find_by_token(token).user.sessions.destroy_all
-      User.find_by_access_token(token).update(access_token: nil, refresh_token: nil, expiry: nil)
       render json: { message: "User successfully logged out"}, status: :ok
 
     end
