@@ -27,8 +27,7 @@ module Api
       totrade_roster[:data][:players].each do |player|
         user_other_roster_keys << player[:player_key].to_s
       end
-      puts roster_keys.join(',')
-      puts roster_keys.join(',')
+
       user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
                                                 user_roster_keys.join(','))
       other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
