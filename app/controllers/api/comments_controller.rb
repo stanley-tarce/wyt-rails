@@ -9,6 +9,7 @@ module Api
         end
 
         def create
+            params.inspect
             comment = Comment.new(name: comment_params[:name], comment: comment_params[:comment], trade: Trade.find(params[:trade_id]))
             if comment.save
                 render json: comment, status: :created
@@ -32,7 +33,7 @@ module Api
         end
         private
         def comment_params
-            params.require(:comment).permit(:name, :comment)
+            params.require(:comment).permit(:name, :description)
         end
         def comments
             Trade.find(params[:trade_id]).comments
