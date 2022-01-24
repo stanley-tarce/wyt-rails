@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     get '/trades', to: 'trades#index' #Trades Index #! NEED: League Key in query params
     post '/create_trade', to: 'trades#create' #Create Trade #! NEED: team_name, team_key, players_to_send(Array with  keys player_name, player_key), players_to_receive(Array with keys player_name, player_key), league_key in query params
     get '/trades/:trade_id', to: 'trades#show' #Show Specific Trade #! NEED: trade_id in url params 
+    get '/trades/:trade_id/owner', to: 'trades#owner' #Show Specific Trade #! NEED: trade_id in url params 
     patch '/trades/:trade_id', to: 'trades#update' #Update Specific Trade #! NEED: trade_id in url params
     delete '/trades/:trade_id', to: 'trades#delete' #Delete Specific Trade #! NEED: trade_id in url params
     get '/trades/:trade_id/comments', to: 'comments#index' #Comments #! NEED: ALL trade_id in url params

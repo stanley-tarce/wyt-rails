@@ -2,9 +2,9 @@
 
 module Api
   class TradesController < ApplicationController
-    prepend_before_action :authenticate_user!, only: %i[index create]
-    before_action :check_token, only: %i[index create] # Order
-    append_before_action :set_response_header, only: %i[index create]
+    prepend_before_action :authenticate_user!, only: %i[index create verify]
+    before_action :check_token, only: %i[index create verify] # Order
+    append_before_action :set_response_header, only: %i[index create verify]
     before_action :show_token_if_user, only: [:show]
     def index
       render json: trades, status: :ok
@@ -122,6 +122,16 @@ module Api
         render json: { message: 'Trade Delete Failed' }, status: 400
       end
     end
+    
+    def owner
+      user_from_trade_id = trade.league.user
+      if user_from_trade_id.email == current_user.email
+        render json: { message: 'true'}, status: :ok
+      else
+        render json: { message: 'false'}, status: :ok
+      end
+    end
+
 
     private
 
