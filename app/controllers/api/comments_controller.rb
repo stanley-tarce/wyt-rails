@@ -10,8 +10,8 @@ module Api
 
         def create
             params.inspect
-            comment = Comment.create(name: comment_params[:name], description: comment_params[:description], trade: Trade.find(params[:trade_id]))
-            if comment
+            comment = Comment.new(name: comment_params[:name], description: comment_params[:description], trade: Trade.find(params[:trade_id]))
+            if comment.save
                 render json: comment, status: :created
             else
                 render json: { errors: comment.errors.full_messages }, status: 422

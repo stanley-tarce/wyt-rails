@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-    before_action :check_token, only: [:delete]
     prepend_before_action :authenticate_user!, only: [:delete]
     def callback
       if auth_hash
