@@ -2,6 +2,8 @@ module Api
     class CommentsController < ApplicationController
         def index
             render json: comments, status: :ok
+        rescue ActiveRecord::RecordNotFound
+            render json: { message: 'Failed to get comments' }, status: 400
         end
 
         def show

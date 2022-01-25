@@ -65,6 +65,8 @@ module Api
       render json: out, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { message: 'Trade Not Found' }, status: 404
+    rescue NoMethodError
+      render json: { message: 'Trade Not Found' }, status: 404
     end
 
     # Specifiy Content-Type: application/json then pass it as array
@@ -95,6 +97,7 @@ module Api
       render json: { error: 'Trade Failed' }, status: 400
     rescue ActionController::ParameterMissing
       render json: { error: 'Missing Parameter' }, status: 400
+
     end
 
     def update
