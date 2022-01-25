@@ -89,7 +89,7 @@ module Api
           #   player_key: player[:player_key], player_name: player[:player_name]
           # )
         end
-        render json: { message: 'Trade Successful' }, status: :ok
+        render json: { message: 'Trade Successful', id: trade.id }, status: :ok
       else
         render json: { message: 'Trade Failed' }, status: 400
       end
