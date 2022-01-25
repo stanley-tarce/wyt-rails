@@ -37,6 +37,9 @@ class ApplicationController < ActionController::API
     if token_expired?
       return current_user.refresh_token_if_expired
     end
+  rescue NoMethodError
+    return json: { error: 'API Failed' }, status: 400
+
   end
 
   def token_expired?
