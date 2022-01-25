@@ -82,7 +82,7 @@ class ApplicationController < ActionController::API
       return current_user_from_trade_params.refresh_token_from_trade_params
     end
     rescue NoMethodError
-      return json: { error: 'API Failed' }, status: 400
+      render json: { error: 'API Failed' }, status: 400
   end
 
   def show_token_if_user
