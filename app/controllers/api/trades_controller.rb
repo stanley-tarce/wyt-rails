@@ -121,6 +121,8 @@ module Api
       else
         render json: { message: 'Trade Delete Failed' }, status: 400
       end
+    rescue ActiveRecord::RecordNotFound
+      render json: { message: 'Trade Not Found' }, status: 404 
     end
     
     def owner
