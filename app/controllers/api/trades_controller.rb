@@ -41,7 +41,7 @@ module Api
         stat2 = other_user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         roster = totrade_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
-                                player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat2 }
+                                player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat2.except('player_key') }
       end
 
       user_roster[:data][:players].each do |player|
