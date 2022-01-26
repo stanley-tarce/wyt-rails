@@ -7,7 +7,7 @@ module Api
     append_before_action :set_response_header, only: %i[index create owner delete update]
     before_action :show_token_if_user, only: [:show]
     def index
-      render json: trades, status: :ok
+      render json: trades.by_ascending, status: :ok
     end
 
     def show
