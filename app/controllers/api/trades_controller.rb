@@ -11,7 +11,8 @@ module Api
     end
 
     def show
-      user_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.league.team_key)
+      if trade.present?
+         user_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.league.team_key)
       totrade_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.team_key)
       user_roster_keys = []
       user_other_roster_keys = []
@@ -63,6 +64,9 @@ module Api
       out = { id: trade.id, user_team_name: trade.league.team_name, user_team_key: trade.league.team_key,
               totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: totrade_other_roster }
       render json: out, status: :ok
+      else
+      render json: {message: "Trade Not Found"}, status: 404
+      end
     rescue ActiveRecord::RecordNotFound
       render json: { message: 'Trade Not Found' }, status: 404
     rescue NoMethodError
@@ -129,6 +133,8 @@ module Api
       else
         render json: { message: 'false'}, status: :ok
       end
+    rescue ActiveRecord::RecordNotFound
+      render json: { message: 'Trade Not Found' }, status: 404
     end
 
 
