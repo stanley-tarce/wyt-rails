@@ -17,7 +17,8 @@ module Yahoo
     rescue RestClient::ExceptionWithResponse => e
       parsed_e = JSON.parse(e.response)
       { code: e.http_code, status: e.message, data: parsed_e['error']['description'] }
-      
+    rescue JSON::ParserError
+      { code: 400, status: 'Bad Request', data: 'API Error' }
     end
   
   end

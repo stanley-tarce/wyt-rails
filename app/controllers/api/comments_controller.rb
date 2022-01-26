@@ -3,7 +3,7 @@ module Api
         def index
             render json: comments, status: :ok
         rescue ActiveRecord::RecordNotFound
-            render json: { message: 'Failed to get comments' }, status: 400
+            render json: { message: 'Failed to get comments' }, status: 404
         end
 
         def show
