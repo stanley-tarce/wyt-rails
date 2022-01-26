@@ -1,17 +1,9 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :sent_players
-  resources :received_players
-  resources :trades
-  resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'auth/yahoo_auth/callback', to: 'sessions#callback'
   delete 'auth/yahoo_auth/logout', to: 'sessions#delete' #Logout #! NEED: Auth Token in Headers
   get 'user', to: 'users#show'
   namespace :api do 
-    # get '/leagues', to: 'teams#leagues'
-    # get '/league', to: 'teams#league'
-    # get '/players', to: 'teams#players'
     get '/leagues', to: 'leagues#index' #First Page
     get '/roster_with_stats', to: 'teams#roster_with_stats' #Compare Team Roster with Stats (For Create Trade)
     get '/teams', to: 'teams#teams' #Get all Teams in specific League #! NEED: League Key in query params

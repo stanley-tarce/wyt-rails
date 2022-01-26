@@ -79,15 +79,9 @@ module Api
       if trade.save && players_to_send.present? && players_to_receive.present?
         players_to_send.each do |player|
           SentPlayer.create(player_key: player[:player_key], player_name: player[:player_name], trade: trade )
-          # Trade.find_by(league_id: League.find_by(league_key: user_params[:league_key])).sent_players.create(
-          #   player_key: player[:player_key], player_name: player[:player_name]
-          # )
         end
         players_to_receive.each do |player|
           ReceivedPlayer.create([player_key: player[:player_key], player_name: player[:player_name], trade:trade])
-          # Trade.find_by(league_id: League.find_by(league_key: user_params[:league_key])).received_players.create(
-          #   player_key: player[:player_key], player_name: player[:player_name]
-          # )
         end
         render json: { message: 'Trade Successful', id: trade.id }, status: :ok
       else

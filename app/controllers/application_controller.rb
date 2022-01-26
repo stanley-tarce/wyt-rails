@@ -86,11 +86,6 @@ class ApplicationController < ActionController::API
   end
 
   def show_token_if_user
-    if token.present?
-      authenticate_user!
-      check_token
-      return set_response_header
-    else
       check_token_expiry_from_trade_params
     end
   end
