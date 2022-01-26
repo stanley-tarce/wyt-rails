@@ -17,7 +17,8 @@ module Yahoo
     rescue RestClient::ExceptionWithResponse => e
       parsed_e = JSON.parse(e.response)
       { code: e.http_code, status: e.message, data: parsed_e['error']['description'] }
+      
     end
-  # rescue JSON::ParserError
-  #   { code: 500, status: 'Internal Server Error', data: 'Internal Server Error' }
+  
+  end
 end
