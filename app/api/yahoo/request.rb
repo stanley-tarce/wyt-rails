@@ -20,5 +20,4 @@ module Yahoo
     end
   rescue JSON:ParserError
     { code: 500, status: 'Internal Server Error', data: 'Internal Server Error' }
-  end
 end
