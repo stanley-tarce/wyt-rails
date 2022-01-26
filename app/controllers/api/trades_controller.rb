@@ -62,7 +62,7 @@ module Api
       end
 
       out = { id: trade.id, user_team_name: trade.league.team_name, user_team_key: trade.league.team_key,
-              totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: totrade_other_roster }
+              totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: totrade_other_roster }
       render json: out, status: :ok
     else
       render json: {message: "Trade Not Found"}, status: 404
@@ -77,7 +77,7 @@ module Api
     def create
       params.inspect
       trade = Trade.new(league: League.find_by(league_key: user_params[:league_key]),
-                        team_key: trade_params[:team_key], team_name: trade_params[:team_name])
+                        team_key: trade_params[:team_key], team_name: trade_params[:team_name], team_logo: trade_params[:team_logo])
       players_to_send = params[:players_to_send].instance_of?(Array) ? params[:players_to_send] : JSON.parse(params[:players_to_send])
       players_to_receive = params[:players_to_receive].instance_of?(Array) ? params[:players_to_receive] : JSON.parse(params[:players_to_receive])
       if trade.save && players_to_send.present? && players_to_receive.present?
@@ -149,7 +149,7 @@ module Api
     end
 
     def trade_params
-      params.require(:trade).permit(:team_key, :team_name)
+      params.require(:trade).permit(:team_key, :team_name, :team_logo)
     end
   end
 end
