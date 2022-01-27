@@ -157,7 +157,7 @@ module Api
     end
 
     def dropped(player)
-      return {player_name: "Dropped", player_key: player.player_key, player_team_full: "-", player_team_full: "-", player_team_abbr: "-", player_number: "-", player_positions: "-", player_image: "-", stats: {
+      return {player_name: "Dropped", player_key: player.player_key, player_team_full: "-", player_team_abbr: "-", player_number: "-", player_positions: "-", player_image: "-", stats: {
       "GP" => "-",
       "FGM/A" => "- / -",
       "FG%" => "-",
