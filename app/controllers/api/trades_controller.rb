@@ -48,7 +48,7 @@ module Api
         clean_stat2 = stat2.except('player_key') rescue stat2
         roster = totrade_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
         puts "Roster #{roster.count} at Player #{player.player_key}"
-        puts "Stat #{stat1.count} at Player #{player.player_key}"        
+        puts "Stat #{stat2.count} at Player #{player.player_key}"        
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
                                 player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: clean_stat2 }
       end
@@ -56,7 +56,7 @@ module Api
       user_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
         puts "Roster #{roster.count} at Player #{player.player_key}"
-        puts "Stat #{stat1.count} at Player #{player.player_key}"
+        puts "Stat #{stat3.count} at Player #{player.player_key}"
         stat3 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         clean_stat3 = stat3.except('player_key') rescue stat4
         user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: clean_stat3 }
@@ -64,7 +64,7 @@ module Api
       totrade_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
         puts "Roster #{roster.count} at Player #{player.player_key}"
-        puts "Stat #{stat1.count} at Player #{player.player_key}"
+        puts "Stat #{stat4.count} at Player #{player.player_key}"
         stat4 = other_user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         # puts "****************  old   #{stat4}"
         clean_stat4 = stat4.except('player_key') rescue stat4
