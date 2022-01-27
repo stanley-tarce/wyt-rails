@@ -20,14 +20,15 @@ module Api
       user_other_roster = []
       totrade_other_roster = []
       players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
-
+      puts players_array
       user_roster[:data][:players].each do |player|
         user_roster_keys << player[:player_key].to_s
       end
       totrade_roster[:data][:players].each do |player|
         user_other_roster_keys << player[:player_key].to_s
       end
-
+      puts user_roster_keys.join(',')
+      puts user_other_roster_keys.join(',')
       user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
                                                 user_roster_keys.join(','))
       other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
