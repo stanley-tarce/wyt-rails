@@ -34,6 +34,7 @@ module Api
       other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
       puts user_player_stats
       puts other_user_player_stats
+      
       trade.sent_players.each do |player|
         stat1 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         clean_stat1 = stat1.except('player_key') rescue stat2
@@ -47,10 +48,14 @@ module Api
         stat2 = other_user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         clean_stat2 = stat2.except('player_key') rescue stat2
         roster = totrade_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
+        if !(roster.nil? || stat2.nil?)
         puts "Roster #{roster.count} at Player #{player.player_key} players_to_receive"
         puts "Stat #{stat2.count} at Player #{player.player_key} players_to_receive"        
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
                                 player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: clean_stat2 }
+        else
+          players_to_receive << dropped(player)
+        end
       end
 
       user_roster[:data][:players].each do |player|
@@ -156,6 +161,23 @@ module Api
 
     def trade_params
       params.require(:trade).permit(:team_key, :team_name, :team_logo)
+    end
+
+    def dropped(player)
+      return {player_name: "Dropped", player_key: player.player_key, player_team_full: "-", player_team_full: "-", player_team_abbr: "-", player_number: "-", player_positions: "-", player_image: "-", stats: {
+      "GP" => "-",
+      "FGM/A" => "- / -",
+      "FG%" => "-",
+      "FTM/A" => "- / -",
+      "FT%" => "-",
+      "3PTM" => "-",
+      "PTS" => "-",
+      "REB" => "-",
+      "AST" => "-",
+      "ST" => "-",
+      "BLK" => "-",
+      "TO" => "-"
+      }}
     end
   end
 end
