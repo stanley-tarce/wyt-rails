@@ -67,8 +67,6 @@ module Api
       render json: out, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { message: 'Trade Not Found' }, status: 404
-    rescue NoMethodError
-      render json: { message: "Couldn't fetch trade data" }, status: 400
     end
 
     # Specifiy Content-Type: application/json then pass it as array
