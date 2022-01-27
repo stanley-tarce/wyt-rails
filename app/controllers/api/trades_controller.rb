@@ -20,27 +20,24 @@ module Api
       user_other_roster = []
       totrade_other_roster = []
       players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
-      puts players_array
+
       user_roster[:data][:players].each do |player|
         user_roster_keys << player[:player_key].to_s
       end
       totrade_roster[:data][:players].each do |player|
         user_other_roster_keys << player[:player_key].to_s
       end
-      puts user_roster_keys.join(',')
-      puts user_other_roster_keys.join(',')
+
       user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
                                                 user_roster_keys.join(','))
       other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
-      puts user_player_stats
-      puts other_user_player_stats
+
       
       trade.sent_players.each do |player|
         stat1 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         clean_stat1 = stat1.except('player_key') rescue stat2
         roster = user_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
-        puts "Roster #{roster.count} at Player #{player.player_key} players_to_send "
-        puts "Stat #{stat1.count} at Player #{player.player_key} players_to_send"
+
         players_to_send << { player_name: player.player_name, player_key: player.player_key,
                              player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: clean_stat1 }
       end
@@ -49,8 +46,7 @@ module Api
         clean_stat2 = stat2.except('player_key') rescue stat2
         roster = totrade_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
         if !(roster.nil? || stat2.nil?)
-        puts "Roster #{roster.count} at Player #{player.player_key} players_to_receive"
-        puts "Stat #{stat2.count} at Player #{player.player_key} players_to_receive"        
+       
         players_to_receive << { player_name: player.player_name, player_key: player.player_key,
                                 player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: clean_stat2 }
         else
@@ -102,7 +98,8 @@ module Api
       render json: { error: 'Trade Failed' }, status: 400
     rescue ActionController::ParameterMissing
       render json: { error: 'Missing Parameter' }, status: 400
-
+    rescue MethodError
+      render json: { error: 'Failed to fetch Trade Data' }, status: 400
     end
 
     def update
