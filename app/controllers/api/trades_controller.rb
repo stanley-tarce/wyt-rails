@@ -31,6 +31,8 @@ module Api
       user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
                                                 user_roster_keys.join(','))
       other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
+      puts user_player_stats
+      puts other_user_player_stats
       trade.sent_players.each do |player|
         stat1 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
         roster = user_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
