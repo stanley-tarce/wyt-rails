@@ -60,16 +60,12 @@ module Api
 
       user_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
-        puts "Roster #{roster.count} at Player #{player.player_key} user_other_rosters"
-        puts "Stat #{stat3.count} at Player #{player.player_key} user_other_rosters"
         stat3 =  user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         clean_stat3 = stat3.except('player_key') rescue stat4
         user_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: clean_stat3 }
       end
       totrade_roster[:data][:players].each do |player|
         next if players_array.include? player[:player_key].to_s
-        puts "Roster #{roster.count} at Player #{player.player_key} totrade_other_roster"
-        puts "Stat #{stat4.count} at Player #{player.player_key} totrade_other_roster"
         stat4 = other_user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
         # puts "****************  old   #{stat4}"
         clean_stat4 = stat4.except('player_key') rescue stat4
