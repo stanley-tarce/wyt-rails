@@ -41,7 +41,7 @@ module Api
             Trade.find(params[:trade_id]).comments
         end
         def comment
-            Trade.find(params[:trade_id]).comments.find(params[:id])
+            Trade.find(params[:trade_id]).comments.find(params[:comment_id])
         end
     end
 end

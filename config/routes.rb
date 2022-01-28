@@ -18,6 +18,6 @@ Rails.application.routes.draw do
     get '/trades/:trade_id/comments/:comment_id', to: 'comments#show'
     post '/trades/:trade_id/comments', to: 'comments#create'
     patch '/trades/:trade_id/comments/:comment_id', to: 'comments#update'
-    delete '/trades/:trade_id/comments/:comment_id', to: 'comments#destroy'
+    delete '/trades/:trade_id/comments/:comment_id', to: 'comments#delete'
   end
 end

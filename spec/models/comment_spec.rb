@@ -14,7 +14,7 @@ RSpec.describe Comment, type: :model do
       expect(@comment.name).to eq(Comment.first.name)
     end
     it '3. It should have a comment' do
-      expect(@comment.comment).to eq(Comment.first.comment)
+      expect(@comment.description).to eq(Comment.first.description)
     end
     it '4. It should exit inside a trade' do
       expect(@comment.trade).to eq(Comment.first.trade)
@@ -27,7 +27,7 @@ RSpec.describe Comment, type: :model do
   context 'Invalid Attributes' do
     it '1. It should not be able to create without a name' do
       trade = FactoryBot.create(:trade)
-      comment = Comment.create(comment: 'This is a comment', trade: trade)
+      comment = Comment.create(description: 'This is a comment', trade: trade)
       expect(comment).to_not be_valid
     end
     it '2. It should not be able to create without a comment' do
@@ -36,7 +36,7 @@ RSpec.describe Comment, type: :model do
       expect(comment).to_not be_valid
     end
     it '3. It should not be able to create without a trade' do
-      comment = Comment.create(name: 'This is a name', comment: 'This is a comment')
+      comment = Comment.create(name: 'This is a name', description: 'This is a comment')
       expect(comment).to_not be_valid
     end
   end
