@@ -11,11 +11,9 @@ module Api
         teams = []
         leagues[:data][:teams].each do |team|
           league_key = team[:team_key].split('.')[0..2].join('.')
-          current_user.leagues.find_or_create_by(league_key: league_key) do |league|
-            league.team_key = team[:team_key]
-            league.team_name = team[:team_name]
-          end
           league = Yahoo::Client.league(updated_token, league_key)
+          current_user.leagues.create_with(team_key: team[:team_key], team_name: team[:team_name]).find_or_create_by(league_key: league_key).update(league_name: league[:data][:league][:league_name])
+          
           teams << { league_key: league_key, league_name: league[:data][:league][:league_name],
                      scoring_type: league[:data][:league][:scoring_type], num_teams: league[:data][:league][:num_teams], team: { team_key: team[:team_key], team_name: team[:team_name], logo_url: team[:logo_url] },roster_positions: league[:data][:league][:roster_postions] }
         end
