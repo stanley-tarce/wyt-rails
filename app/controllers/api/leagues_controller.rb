@@ -10,9 +10,7 @@ module Api
       if leagues[:data]
         teams = []
         leagues[:data][:teams].each do |team|
-          puts team[:team_key]
           roster = Yahoo::Client.players(updated_token, team[:team_key])[:data][:players]
-          puts roster
           league_key = team[:team_key].split('.')[0..2].join('.')
           league = Yahoo::Client.league(updated_token, league_key)
           current_user.leagues.create_with(team_key: team[:team_key], team_name: team[:team_name]).find_or_create_by(league_key: league_key).update(league_name: league[:data][:league][:league_name])

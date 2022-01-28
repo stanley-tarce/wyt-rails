@@ -49,7 +49,6 @@ module Yahoo
             if response[:code] == 200
                 resp_players = response[:data]['fantasy_content']['team'][1]['roster']['0']['players']
                 players = []
-                puts resp_players
                 if response[:data].dig('fantasy_content','team',1,'roster','0','players','count')
                      for i in (0...resp_players['count']) do
                     flattened_player_info = {}
