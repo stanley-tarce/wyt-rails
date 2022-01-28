@@ -6,7 +6,7 @@ RSpec.describe "Users", type: :request do
     get '/auth/yahoo_auth/callback'
     @token = request.env['omniauth.auth'][:credentials][:token]
   end
-  context "/user *with Bearer Token" do
+  context "/user *with Bearer Token", :vcr => true do
     it "1. It should get a 200 response" do 
       get '/user', headers: { 'Authorization': "Bearer #{@token}" }
       expect(response).to have_http_status(200)
@@ -22,10 +22,9 @@ RSpec.describe "Users", type: :request do
     it "4. It should have a full_name in the response" do
       get '/user', headers: { 'Authorization': "Bearer #{@token}" }
       expect(JSON.parse(response.body)['full_name']).to eq(User.first.full_name)
-      puts response.headers['authorization']
     end
   end
-  context "/user *without Bearer Token" do
+  context "/user *without Bearer Token", :vcr => true do
     it "1. It should get a 401 response" do
       get '/user'
       expect(response).to have_http_status(401)

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: refresh_token=AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB&client_id=dj0yJmk9UHIxVUJrbEsxRkdLJmQ9WVdrOVlrWm1iMFJzVVhNbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTA3&client_secret=a9398b94a0e476b87a6b1d1f15457bcbaf7b359b&grant_type=refresh_token
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.0.2p107
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '265'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.login.yahoo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Jan 2022 14:39:03 GMT
+      Cache-Control:
+      - must-revalidate
+      - no-cache
+      - no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1206'
+      Server:
+      - ATS
+      Age:
+      - '0'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"7l4u7WSbuBsoEaRBk191vxxQvYWKz1xpHDD.0wdwDDt6Tb4saDK0ipSd7hMes9zX6JIZ1wm8lQaDtMy2BRiDobDxYi1F5l4F98WTfyzRqHEUTIEkEtVt_Tb9mkdnwWul8T4cmrRcukVdaflJK.bFWQeqNqCOWLb26XdulGG1LVE_5ocIDC3MuzP0bcRYQxq4kozEHFqTd2sIcOy0UaCZ_pS2sQ8duYG.ofxyLswvtxOzqu1vZO8Am1h8BawyaqzWFWcqegESu8ZGjB5D_vDMRTM.WkC03FuouHaZTPMvSMHiIf5nvoi2H4YOJCBEGS8y1YUsi4XXtvkBOrtEEM6aPrB0n_czsRXk5z8jLfv.vzmFiO2IYRa_LQV.pCcIZpZBO9ywkIhIiQNW.yyaw260r7v7QQ28E_wsP7tiscwkFKdEj64xlJIXn2F8_QO46dxLmSDWEaoQtUDJc2pU7ZajrZJTofpnV4qVPFA2glTR66Fd_3XDj7ZR8O1mn_afDkexzGLIgP142jis1xd_rrXPLBZTEr5_RXOG4tBFYLKRiRqYIZZMF8HtuPXq6OCYM5iPQF04mY9gjqSRx1e2L2DstHVB6mVawykrnVGLg.Bld61tEXpZ4zZzAlYTz_6BMKJKei4DVaovXT7Ee8S6BAUBnTTd6BEnGgLDYaW3vkkg6UJ4CjR4lef3ygd0q6wjHTgvfKhuCpv_fiszi5WWmVNimskEgPlyIb1L1AU_u.Wo6YCQKqi.fXoeR.pjx.HYB7e86UG2zzPvJfT1lP_J3Ah72TMZ0CoaR5KvEaOySKxydK2D_.aiIyfL6vJYZDtlYqRuy7XbNSAmU1vzQCGxcUxt01enmHBrrITXbg3d5s25ByrSBALj5Y8EI5whLFVdtU.tn8eGkBhF40.hjbWBWde2zpxC0kCoe4w97ALwtGKmyOz9UtvKLkjb1HIcx3c7bVwm7efhDlknLm34YTQuKPmg_iaUIVIo62w1XzXhxnl1IevvCVlP4i5RAUsdUNHnA_5rKP5REz_ubmbkdwGHLy9zgkyFlBSD.7dmFhzKlmE-","refresh_token":"AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB","expires_in":3600,"token_type":"bearer"}'
+  recorded_at: Fri, 28 Jan 2022 14:39:02 GMT
+recorded_with: VCR 6.0.0

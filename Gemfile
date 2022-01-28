@@ -61,3 +61,6 @@ group :test do
 end 
 
 gem 'rest-client'
+gem 'vcr'
+gem 'webmock'
+gem "vcr_better_binary"

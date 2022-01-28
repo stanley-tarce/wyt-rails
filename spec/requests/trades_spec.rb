@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-RSpec.describe 'Teams', type: :request do
+RSpec.describe 'Teams', type: :request, :vcr => true do
   before(:each) do
     Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:twitter]
     get '/auth/yahoo_auth/callback'

@@ -1,0 +1,331 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.login.yahoo.com/oauth2/get_token
+    body:
+      encoding: UTF-8
+      string: refresh_token=AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB&client_id=dj0yJmk9UHIxVUJrbEsxRkdLJmQ9WVdrOVlrWm1iMFJzVVhNbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTA3&client_secret=a9398b94a0e476b87a6b1d1f15457bcbaf7b359b&grant_type=refresh_token
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.0.2p107
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '265'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.login.yahoo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Jan 2022 14:37:06 GMT
+      Cache-Control:
+      - must-revalidate
+      - no-cache
+      - no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1206'
+      Server:
+      - ATS
+      Age:
+      - '0'
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"VO9Tld2buBuWn84iIrBD4eTmR8xb.xOE2IBwP8GRvP2o0ZlBqaTbLBZGBF_ySTCaoi20yVPungxd_xidxvMErkAehJkb4mxlUwF7olgreXihCe6G0f9fcd6R382OUC53ubiWYFHGBfVoWFWGGBdaXdmiv4J_bwYFCoZEJkTXL18Cl_233ps4rRTxFUKGY_3R7BhhkDlypG5O2OMT1GmcdWr4yPT6YYRFvOS71ljNtZa6ezhwXEqsTmMxj5G5YoZvZBJ_wWNkuXbSfjpAmZ_CzX58jNDwwboeYlHtVPX9bi5Bzs2k2GwJOnlbMaVaN3lmy68gI6gNT34Cdl74ksNwxCvNvCvZ73NfnKinHv7VfOYi0NQAU1G3BYAJYwtd8XUhYMQTN.dhiGsSFztGlnChbX08AaM9PW1_GCDWG0SdANBMAm0FIfLbY5wUa._3nAQuJCDFt31NrkhkG8tj5iO9XWOTS3inVPOoewkrTA2GjyDlzfx6DDMmkQnwSnRqRmnubsgvMWr6731X.nNUYJU5L8i9qVUyZZ1TT9fkUWAkQaufOX2swfhevgow2OiZKhA8nG9_zWRoXWxjWLCJ8ynv0R.rXC5qQMrAiHd5f05vLS2M4.26NJO.DO6A2fG2oTF09PMz_pATTENs3VPN9xtbuy2j4.UhZpXmOnB96OMPfocsgIhaPORLQg6bkyj2XMD5D2Z29BB3NfHAOcHlauWl2QRDJ4VZAHgSmHW8TJm8tjWll5ro8WB9S8_2ZeIAhvODV56prQynXDorkOoKSn0cIsoDoBQVE62SqJmm2ZWDavNPK7Btn_v2yPL8owCkV_n.m2Jzsi02qkjRcQGng10w5lG8SvqsJq.n5UHm5lIASjFHg4qCuUshRqMM_3HxvIEXYCXf3HXbLsbLijuqCqR1CnVLCyItPZCOPnYINs8eyAUfmuHlzkIL8htDQyWkaK_O1qp59MO2_ieOw.NcQWHjLyBhq4pUnpveRXs5TdDTmKtZ.etoZ6jI.ervbgEtHopk45E3Lpk5aiFpsFIjTpmNZMVRCSIBB2aZ6bsbIkI-","refresh_token":"AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB","expires_in":3600,"token_type":"bearer"}'
+  recorded_at: Fri, 28 Jan 2022 14:37:05 GMT
+- request:
+    method: get
+    uri: https://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=nba/teams?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.0.2p107
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer VO9Tld2buBuWn84iIrBD4eTmR8xb.xOE2IBwP8GRvP2o0ZlBqaTbLBZGBF_ySTCaoi20yVPungxd_xidxvMErkAehJkb4mxlUwF7olgreXihCe6G0f9fcd6R382OUC53ubiWYFHGBfVoWFWGGBdaXdmiv4J_bwYFCoZEJkTXL18Cl_233ps4rRTxFUKGY_3R7BhhkDlypG5O2OMT1GmcdWr4yPT6YYRFvOS71ljNtZa6ezhwXEqsTmMxj5G5YoZvZBJ_wWNkuXbSfjpAmZ_CzX58jNDwwboeYlHtVPX9bi5Bzs2k2GwJOnlbMaVaN3lmy68gI6gNT34Cdl74ksNwxCvNvCvZ73NfnKinHv7VfOYi0NQAU1G3BYAJYwtd8XUhYMQTN.dhiGsSFztGlnChbX08AaM9PW1_GCDWG0SdANBMAm0FIfLbY5wUa._3nAQuJCDFt31NrkhkG8tj5iO9XWOTS3inVPOoewkrTA2GjyDlzfx6DDMmkQnwSnRqRmnubsgvMWr6731X.nNUYJU5L8i9qVUyZZ1TT9fkUWAkQaufOX2swfhevgow2OiZKhA8nG9_zWRoXWxjWLCJ8ynv0R.rXC5qQMrAiHd5f05vLS2M4.26NJO.DO6A2fG2oTF09PMz_pATTENs3VPN9xtbuy2j4.UhZpXmOnB96OMPfocsgIhaPORLQg6bkyj2XMD5D2Z29BB3NfHAOcHlauWl2QRDJ4VZAHgSmHW8TJm8tjWll5ro8WB9S8_2ZeIAhvODV56prQynXDorkOoKSn0cIsoDoBQVE62SqJmm2ZWDavNPK7Btn_v2yPL8owCkV_n.m2Jzsi02qkjRcQGng10w5lG8SvqsJq.n5UHm5lIASjFHg4qCuUshRqMM_3HxvIEXYCXf3HXbLsbLijuqCqR1CnVLCyItPZCOPnYINs8eyAUfmuHlzkIL8htDQyWkaK_O1qp59MO2_ieOw.NcQWHjLyBhq4pUnpveRXs5TdDTmKtZ.etoZ6jI.ervbgEtHopk45E3Lpk5aiFpsFIjTpmNZMVRCSIBB2aZ6bsbIkI-
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - fantasysports.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Jan 2022 14:37:07 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Yahoo-Request-Id:
+      - 6u10avtgv7vsj
+      X-Yahoo-Host:
+      - fantasy-sports-api--public-production-bf1-7bd55d6b46-62rmv
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Origin,Accept-Encoding
+      Set-Cookie:
+      - SPTB=d=b7so8R82Y3DH_IVJm2vx23tRvjPniF2m5U7UdRP_WS3Qf6W5buGFscdFmZdM0qVJPlSQjL8VKm3ULzruwO5vObytjBIT_CutpEGlXQNTE3c-&v=1;
+        expires=Sun, 27-Feb-2022 14:37:07 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      Cache-Control:
+      - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
+      Content-Length:
+      - '1149'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Envoy-Upstream-Service-Time:
+      - '85'
+      Server:
+      - ATS
+      Age:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=15552000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Connection:
+      - keep-alive
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      bin_key: xocid-ritid-hubac-totup-hedus-tupym-rypoz-nodun-bypif-facym-garid-neduc-vitol-fycof-lufac-zinyf-tyxyx
+  recorded_at: Fri, 28 Jan 2022 14:37:06 GMT
+- request:
+    method: get
+    uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.223791/settings?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.0.2p107
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer VO9Tld2buBuWn84iIrBD4eTmR8xb.xOE2IBwP8GRvP2o0ZlBqaTbLBZGBF_ySTCaoi20yVPungxd_xidxvMErkAehJkb4mxlUwF7olgreXihCe6G0f9fcd6R382OUC53ubiWYFHGBfVoWFWGGBdaXdmiv4J_bwYFCoZEJkTXL18Cl_233ps4rRTxFUKGY_3R7BhhkDlypG5O2OMT1GmcdWr4yPT6YYRFvOS71ljNtZa6ezhwXEqsTmMxj5G5YoZvZBJ_wWNkuXbSfjpAmZ_CzX58jNDwwboeYlHtVPX9bi5Bzs2k2GwJOnlbMaVaN3lmy68gI6gNT34Cdl74ksNwxCvNvCvZ73NfnKinHv7VfOYi0NQAU1G3BYAJYwtd8XUhYMQTN.dhiGsSFztGlnChbX08AaM9PW1_GCDWG0SdANBMAm0FIfLbY5wUa._3nAQuJCDFt31NrkhkG8tj5iO9XWOTS3inVPOoewkrTA2GjyDlzfx6DDMmkQnwSnRqRmnubsgvMWr6731X.nNUYJU5L8i9qVUyZZ1TT9fkUWAkQaufOX2swfhevgow2OiZKhA8nG9_zWRoXWxjWLCJ8ynv0R.rXC5qQMrAiHd5f05vLS2M4.26NJO.DO6A2fG2oTF09PMz_pATTENs3VPN9xtbuy2j4.UhZpXmOnB96OMPfocsgIhaPORLQg6bkyj2XMD5D2Z29BB3NfHAOcHlauWl2QRDJ4VZAHgSmHW8TJm8tjWll5ro8WB9S8_2ZeIAhvODV56prQynXDorkOoKSn0cIsoDoBQVE62SqJmm2ZWDavNPK7Btn_v2yPL8owCkV_n.m2Jzsi02qkjRcQGng10w5lG8SvqsJq.n5UHm5lIASjFHg4qCuUshRqMM_3HxvIEXYCXf3HXbLsbLijuqCqR1CnVLCyItPZCOPnYINs8eyAUfmuHlzkIL8htDQyWkaK_O1qp59MO2_ieOw.NcQWHjLyBhq4pUnpveRXs5TdDTmKtZ.etoZ6jI.ervbgEtHopk45E3Lpk5aiFpsFIjTpmNZMVRCSIBB2aZ6bsbIkI-
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - fantasysports.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Jan 2022 14:37:08 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Yahoo-Request-Id:
+      - ak5k01dgv7vsk
+      X-Yahoo-Host:
+      - fantasy-sports-api--pub-base-production-bf1-7f694b7978-cc6j7
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Origin,Accept-Encoding
+      Set-Cookie:
+      - SPTB=d=gIr7bJ0xY3CA5phzIVoFiDuTlKF5E8kDZREXXvCBsAVL7Yz9iklkUjmbiKkEURyAaBpgTO9CrXfrbw9VPRqV4Y97skRaU4rDtuRZYX6nU3s-&v=1;
+        expires=Sun, 27-Feb-2022 14:37:08 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      Cache-Control:
+      - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
+      Content-Length:
+      - '1626'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Envoy-Upstream-Service-Time:
+      - '29'
+      Server:
+      - ATS
+      Age:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=15552000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Connection:
+      - keep-alive
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      bin_key: xozih-lonam-desog-kerec-canek-turan-limek-macel-zarob-vofed-borap-hufam-zyfof-ravat-vafav-peven-tyxex
+  recorded_at: Fri, 28 Jan 2022 14:37:07 GMT
+- request:
+    method: get
+    uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.224111/settings?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.0.2p107
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer VO9Tld2buBuWn84iIrBD4eTmR8xb.xOE2IBwP8GRvP2o0ZlBqaTbLBZGBF_ySTCaoi20yVPungxd_xidxvMErkAehJkb4mxlUwF7olgreXihCe6G0f9fcd6R382OUC53ubiWYFHGBfVoWFWGGBdaXdmiv4J_bwYFCoZEJkTXL18Cl_233ps4rRTxFUKGY_3R7BhhkDlypG5O2OMT1GmcdWr4yPT6YYRFvOS71ljNtZa6ezhwXEqsTmMxj5G5YoZvZBJ_wWNkuXbSfjpAmZ_CzX58jNDwwboeYlHtVPX9bi5Bzs2k2GwJOnlbMaVaN3lmy68gI6gNT34Cdl74ksNwxCvNvCvZ73NfnKinHv7VfOYi0NQAU1G3BYAJYwtd8XUhYMQTN.dhiGsSFztGlnChbX08AaM9PW1_GCDWG0SdANBMAm0FIfLbY5wUa._3nAQuJCDFt31NrkhkG8tj5iO9XWOTS3inVPOoewkrTA2GjyDlzfx6DDMmkQnwSnRqRmnubsgvMWr6731X.nNUYJU5L8i9qVUyZZ1TT9fkUWAkQaufOX2swfhevgow2OiZKhA8nG9_zWRoXWxjWLCJ8ynv0R.rXC5qQMrAiHd5f05vLS2M4.26NJO.DO6A2fG2oTF09PMz_pATTENs3VPN9xtbuy2j4.UhZpXmOnB96OMPfocsgIhaPORLQg6bkyj2XMD5D2Z29BB3NfHAOcHlauWl2QRDJ4VZAHgSmHW8TJm8tjWll5ro8WB9S8_2ZeIAhvODV56prQynXDorkOoKSn0cIsoDoBQVE62SqJmm2ZWDavNPK7Btn_v2yPL8owCkV_n.m2Jzsi02qkjRcQGng10w5lG8SvqsJq.n5UHm5lIASjFHg4qCuUshRqMM_3HxvIEXYCXf3HXbLsbLijuqCqR1CnVLCyItPZCOPnYINs8eyAUfmuHlzkIL8htDQyWkaK_O1qp59MO2_ieOw.NcQWHjLyBhq4pUnpveRXs5TdDTmKtZ.etoZ6jI.ervbgEtHopk45E3Lpk5aiFpsFIjTpmNZMVRCSIBB2aZ6bsbIkI-
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - fantasysports.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Jan 2022 14:37:06 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Yahoo-Request-Id:
+      - fvrgbm9gv7vsl
+      X-Yahoo-Host:
+      - fantasy-sports-api--public-production-bf1-7bd55d6b46-snx6j
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Origin,Accept-Encoding
+      Set-Cookie:
+      - SPTB=d=k0E700AwY3D.4gTFOyLFIEkfnc7TLDaHTtRjKH6dYFyZ7xL5p.x3ZupHUzGZ.ksu7xlblk2C1dpemOm86mCuMqk.aAV8yU.LiHAifBWUSdU-&v=1;
+        expires=Sun, 27-Feb-2022 14:37:09 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      Cache-Control:
+      - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
+      Content-Length:
+      - '1627'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Envoy-Upstream-Service-Time:
+      - '27'
+      Server:
+      - ATS
+      Age:
+      - '4'
+      Strict-Transport-Security:
+      - max-age=15552000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Connection:
+      - keep-alive
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      bin_key: xocor-tizam-cuzyn-polym-gahaf-vuzid-rykyl-tuhub-bolil-gahar-penaf-dyzud-milib-bezed-zodum-cilyc-guxix
+  recorded_at: Fri, 28 Jan 2022 14:37:08 GMT
+- request:
+    method: get
+    uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.223791/teams?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.0.2p107
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer VO9Tld2buBuWn84iIrBD4eTmR8xb.xOE2IBwP8GRvP2o0ZlBqaTbLBZGBF_ySTCaoi20yVPungxd_xidxvMErkAehJkb4mxlUwF7olgreXihCe6G0f9fcd6R382OUC53ubiWYFHGBfVoWFWGGBdaXdmiv4J_bwYFCoZEJkTXL18Cl_233ps4rRTxFUKGY_3R7BhhkDlypG5O2OMT1GmcdWr4yPT6YYRFvOS71ljNtZa6ezhwXEqsTmMxj5G5YoZvZBJ_wWNkuXbSfjpAmZ_CzX58jNDwwboeYlHtVPX9bi5Bzs2k2GwJOnlbMaVaN3lmy68gI6gNT34Cdl74ksNwxCvNvCvZ73NfnKinHv7VfOYi0NQAU1G3BYAJYwtd8XUhYMQTN.dhiGsSFztGlnChbX08AaM9PW1_GCDWG0SdANBMAm0FIfLbY5wUa._3nAQuJCDFt31NrkhkG8tj5iO9XWOTS3inVPOoewkrTA2GjyDlzfx6DDMmkQnwSnRqRmnubsgvMWr6731X.nNUYJU5L8i9qVUyZZ1TT9fkUWAkQaufOX2swfhevgow2OiZKhA8nG9_zWRoXWxjWLCJ8ynv0R.rXC5qQMrAiHd5f05vLS2M4.26NJO.DO6A2fG2oTF09PMz_pATTENs3VPN9xtbuy2j4.UhZpXmOnB96OMPfocsgIhaPORLQg6bkyj2XMD5D2Z29BB3NfHAOcHlauWl2QRDJ4VZAHgSmHW8TJm8tjWll5ro8WB9S8_2ZeIAhvODV56prQynXDorkOoKSn0cIsoDoBQVE62SqJmm2ZWDavNPK7Btn_v2yPL8owCkV_n.m2Jzsi02qkjRcQGng10w5lG8SvqsJq.n5UHm5lIASjFHg4qCuUshRqMM_3HxvIEXYCXf3HXbLsbLijuqCqR1CnVLCyItPZCOPnYINs8eyAUfmuHlzkIL8htDQyWkaK_O1qp59MO2_ieOw.NcQWHjLyBhq4pUnpveRXs5TdDTmKtZ.etoZ6jI.ervbgEtHopk45E3Lpk5aiFpsFIjTpmNZMVRCSIBB2aZ6bsbIkI-
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - fantasysports.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 28 Jan 2022 14:37:10 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Yahoo-Request-Id:
+      - ea7ud3dgv7vsm
+      X-Yahoo-Host:
+      - fantasy-sports-api--public-production-bf1-7bd55d6b46-zkzrt
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Origin,Accept-Encoding
+      Set-Cookie:
+      - SPTB=d=o4tA37MzY3APkLZ4WQZh_3alC10WKS2sI0o8H5ueBCsJK5mT2sgyKX2YBkC2eq1w.rB2hyoOQwoxNoZ8_zI_knv_cBdXliSbpAraJaDjq1o-&v=1;
+        expires=Sun, 27-Feb-2022 14:37:10 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      Cache-Control:
+      - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
+      Content-Length:
+      - '2659'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Envoy-Upstream-Service-Time:
+      - '178'
+      Server:
+      - ATS
+      Age:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=15552000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Connection:
+      - keep-alive
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      bin_key: xidep-cecat-bocav-sipad-pefyg-dymos-pilal-kovyl-zalam-kefif-zidus-biran-tipeg-rohot-macec-sucob-cexyx
+  recorded_at: Fri, 28 Jan 2022 14:37:09 GMT
+recorded_with: VCR 6.0.0

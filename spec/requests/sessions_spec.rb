@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-RSpec.describe 'Sessions', type: :request do
+RSpec.describe 'Sessions', type: :request, :vcr => true do
   before(:each) do
     Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:twitter]
     get '/auth/yahoo_auth/callback'
     @token = request.env['omniauth.auth'][:credentials][:token]
   end
-  context 'Yahoo Auth and Callback' do
+  context 'Yahoo Auth and Callback'  do
     it '1. It should return a hash value' do
       expect(request.env['omniauth.auth']).to be_a(Hash)
     end

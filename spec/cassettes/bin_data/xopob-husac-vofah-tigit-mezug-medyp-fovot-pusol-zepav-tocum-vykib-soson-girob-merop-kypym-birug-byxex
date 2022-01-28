@@ -1,0 +1,959 @@
+{
+    "fantasy_content": {
+        "xml:lang": "en-US",
+        "yahoo:uri": "\/fantasy\/v2\/league\/410.l.223791\/teams",
+        "league": [
+            {
+                "league_key": "410.l.223791",
+                "league_id": "223791",
+                "name": "Yahoo Public 223791",
+                "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791",
+                "logo_url": "https:\/\/s.yimg.com\/cv\/api\/default\/20180206\/default-league-logo@2x.png",
+                "draft_status": "postdraft",
+                "num_teams": 12,
+                "edit_key": "2022-01-28",
+                "weekly_deadline": "intraday",
+                "league_update_timestamp": "1643353438",
+                "scoring_type": "head",
+                "league_type": "public",
+                "renew": "",
+                "renewed": "",
+                "iris_group_chat_id": "",
+                "allow_add_to_dl_extra_pos": 0,
+                "is_pro_league": "0",
+                "is_cash_league": "0",
+                "current_week": 15,
+                "start_week": "14",
+                "start_date": "2022-01-17",
+                "end_week": "23",
+                "end_date": "2022-04-03",
+                "game_code": "nba",
+                "season": "2021"
+            },
+            {
+                "teams": {
+                    "0": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.1"
+                                },
+                                {
+                                    "team_id": "1"
+                                },
+                                {
+                                    "name": "Jeff's Astonishing Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/1"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_7_j.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 8
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": "7"
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "3"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 5
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "1",
+                                                "nickname": "Jeff",
+                                                "guid": "URCZ4H7J2TTDNJJVYXNPWO7XZM",
+                                                "email": "taiseyjeffrey396@gmail.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/75ad6a07-0e38-49c7-8a7a-cc5558dabd09_64sq.jpg",
+                                                "felo_score": "569",
+                                                "felo_tier": "bronze"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "1": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.2"
+                                },
+                                {
+                                    "team_id": "2"
+                                },
+                                {
+                                    "name": "Weldon's Wondrous Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/2"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_7_w.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 12
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": "1"
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 1
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "2",
+                                                "nickname": "Weldon",
+                                                "guid": "STAZJG6VM6UTOPNGOAXW7FJ3KY",
+                                                "email": "weldonkenei30@gmail.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg",
+                                                "felo_score": "587",
+                                                "felo_tier": "bronze"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "2": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.3"
+                                },
+                                {
+                                    "team_id": "3"
+                                },
+                                {
+                                    "name": "Imad's Fabulous Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/3"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_1_i.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 1
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 12
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "3",
+                                                "nickname": "Imad",
+                                                "guid": "DBANIZN5IYX7RZKLGQM7QL4LNU",
+                                                "email": "soccerteamhero@gmail.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "3": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.4"
+                                },
+                                {
+                                    "team_id": "4"
+                                },
+                                {
+                                    "name": "right's Hoopers"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/4"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_8_r.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 4
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 9
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "4",
+                                                "nickname": "right",
+                                                "guid": "6YGORW2HVDZWJHO5HSOUEWI2KQ",
+                                                "email": "rightchoicepm@yahoo.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "4": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.5"
+                                },
+                                {
+                                    "team_id": "5"
+                                },
+                                {
+                                    "name": "Double Dribblers"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/5"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_9_d.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 2
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": "6"
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "2"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 11
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "5",
+                                                "nickname": "Marc",
+                                                "guid": "AGKQG5C37QWN5RUP5ZDTCYBCPM",
+                                                "email": "ball.breakers99@yahoo.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/4687\/37480675833_2a9450_64sq.jpg"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "5": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.6"
+                                },
+                                {
+                                    "team_id": "6"
+                                },
+                                {
+                                    "name": "Stanley's Top-Notch Team"
+                                },
+                                {
+                                    "is_owned_by_current_login": 1
+                                },
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/6"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_5_s.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 3
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 10
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "6",
+                                                "nickname": "Stanley",
+                                                "guid": "UPWKRIWSHPMUU6XTGFPLLEBMNY",
+                                                "is_current_login": "1",
+                                                "email": "stanleytarce18@gmail.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg",
+                                                "felo_score": "592",
+                                                "felo_tier": "bronze"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "6": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.7"
+                                },
+                                {
+                                    "team_id": "7"
+                                },
+                                {
+                                    "name": "saket's Outstanding Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/7"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_3_s.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 5
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 8
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "7",
+                                                "nickname": "saket",
+                                                "guid": "IKHLT54LL2AO43V3HN6FAD2AAQ",
+                                                "email": "kanchs0365@my.marshfieldschools.org",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg",
+                                                "felo_score": "589",
+                                                "felo_tier": "bronze"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "7": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.8"
+                                },
+                                {
+                                    "team_id": "8"
+                                },
+                                {
+                                    "name": "Robert's Reasonable Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/8"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_1_r.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 7
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 6
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "8",
+                                                "nickname": "Robert",
+                                                "guid": "EBODRTGP7AA5ZU4MA4TCDLCM6A",
+                                                "email": "rferraro@mbuilds.ca",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "8": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.9"
+                                },
+                                {
+                                    "team_id": "9"
+                                },
+                                {
+                                    "name": "Kip's Fine Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/9"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_8_k.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 9
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 4
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "9",
+                                                "nickname": "Kip",
+                                                "guid": "DX6JDR5FHC6EPYIMRP2F2SHK7E",
+                                                "email": "carnell1987@gmail.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg",
+                                                "felo_score": "547",
+                                                "felo_tier": "bronze"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "9": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.10"
+                                },
+                                {
+                                    "team_id": "10"
+                                },
+                                {
+                                    "name": "tonyw's Slam-Dunk Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/10"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_5_t.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 11
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": "4"
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "1"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 2
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "10",
+                                                "nickname": "tonyw",
+                                                "guid": "ATGYOYW5OW4Y6MOXTRUNTSKSIE",
+                                                "email": "trwoody369@yahoo.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/4461\/37348303523_2bd542_64sq.jpg",
+                                                "felo_score": "903",
+                                                "felo_tier": "diamond"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "10": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.11"
+                                },
+                                {
+                                    "team_id": "11"
+                                },
+                                {
+                                    "name": "Gators"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/11"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_1_g.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 6
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 7
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "11",
+                                                "nickname": "Nathan",
+                                                "guid": "O6V6E63WM2J74HHCRTTGYGJ54I",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/default_user_profile_pic_64sq.jpg"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "11": {
+                        "team": [
+                            [
+                                {
+                                    "team_key": "410.l.223791.t.12"
+                                },
+                                {
+                                    "team_id": "12"
+                                },
+                                {
+                                    "name": "RyderTheGoat3's Genius Team"
+                                },
+                                [],
+                                {
+                                    "url": "https:\/\/basketball.fantasysports.yahoo.com\/nba\/223791\/12"
+                                },
+                                {
+                                    "team_logos": [
+                                        {
+                                            "team_logo": {
+                                                "size": "large",
+                                                "url": "https:\/\/s.yimg.com\/cv\/apiv2\/default\/nba\/nba_8_r.png"
+                                            }
+                                        }
+                                    ]
+                                },
+                                [],
+                                {
+                                    "waiver_priority": 10
+                                },
+                                {
+                                    "faab_balance": "100"
+                                },
+                                {
+                                    "number_of_moves": 0
+                                },
+                                {
+                                    "number_of_trades": 0
+                                },
+                                {
+                                    "roster_adds": {
+                                        "coverage_type": "week",
+                                        "coverage_value": 15,
+                                        "value": "0"
+                                    }
+                                },
+                                [],
+                                {
+                                    "league_scoring_type": "head"
+                                },
+                                [],
+                                {
+                                    "draft_position": 3
+                                },
+                                {
+                                    "has_draft_grade": 0
+                                },
+                                [],
+                                [],
+                                {
+                                    "managers": [
+                                        {
+                                            "manager": {
+                                                "manager_id": "12",
+                                                "nickname": "RyderTheGoat3",
+                                                "guid": "2SVIQ5TFMZ74TUWLBAVS6ZFEFV",
+                                                "email": "jschiff29@aol.com",
+                                                "image_url": "https:\/\/s.yimg.com\/ag\/images\/6e857155-e9c3-4f24-a1ae-cfcb3143c9de_64sq.jpg",
+                                                "felo_score": "590",
+                                                "felo_tier": "bronze"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    "count": 12
+                }
+            }
+        ],
+        "time": "167.22989082336ms",
+        "copyright": "Data provided by Yahoo! and STATS, LLC",
+        "refresh_rate": "60"
+    }
+}
