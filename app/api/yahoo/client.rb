@@ -50,7 +50,7 @@ module Yahoo
                 resp_players = response[:data]['fantasy_content']['team'][1]['roster']['0']['players']
                 players = []
                 puts resp_players
-                if resp_players.dig('count')
+                if response[:data].dig('fantasy_content','team',1,'roster','0','players','count')
                      for i in (0...resp_players['count']) do
                     flattened_player_info = {}
                     resp_players[i.to_s]['player'][0].each{|j| j.each{|k,v| flattened_player_info[k] = v }}
