@@ -45,6 +45,7 @@ module Yahoo
 
         def self.players(access_token, team_key)
             response = Request.call('get', "/team/#{team_key}/roster?format=json", access_token)
+            puts response[:data]
             if response[:code] == 200
                 resp_players = response[:data]['fantasy_content']['team'][1]['roster']['0']['players']
                 players = []
