@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:10 GMT
+      - Sat, 29 Jan 2022 02:40:15 GMT
       Cache-Control:
       - must-revalidate
       - no-cache
@@ -50,8 +50,8 @@ http_interactions:
       - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
     body:
       encoding: UTF-8
-      string: '{"access_token":"e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-","refresh_token":"AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB","expires_in":3600,"token_type":"bearer"}'
-  recorded_at: Sat, 29 Jan 2022 00:32:10 GMT
+      string: '{"access_token":"yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-","refresh_token":"AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB","expires_in":3600,"token_type":"bearer"}'
+  recorded_at: Sat, 29 Jan 2022 02:40:14 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=nba/teams?format=json
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -77,34 +77,34 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:11 GMT
+      - Sat, 29 Jan 2022 02:40:16 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - 85fn7btgv92ob
+      - 4ujbv9pgv9a8g
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-dd665
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-x6rlz
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=dTZA8VauF3cKJgsy1rFsh6KuU8DH_GJ5b0J6YqPsC2Wj3_bGoWShEdVDmg_WD35Km__Yk0qdECNM9QMgATmOZsmWJg.NWl2Y_Q8BsvN4P0A-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:11 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=SNGHbPm1NXe6ypKhMrikx7wJvMAXqmWL8o38zHatLqrMh33uAH2k0npBtY30oWjYBckYXDVQzW0hWmcpYEegcVEnJ6_9yWcwkRiWLvhY.5Y-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:16 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
-      - '1148'
+      - '1149'
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '65'
+      - '148'
       Server:
       - ATS
       Age:
-      - '0'
+      - '1'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -330,12 +330,12 @@ http_interactions:
                     },
                     "count": 1
                 },
-                "time": "55.22894859314ms",
+                "time": "140.66195487976ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:11 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:15 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/team/410.l.223791.t.6/roster?format=json
@@ -350,7 +350,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -361,34 +361,34 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:12 GMT
+      - Sat, 29 Jan 2022 02:40:17 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - 76r7sttgv92oc
+      - 7ucbg3tgv9a8h
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-r496d
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-mq2h8
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=NcgnXmWpF3fWK1JobPQ7irrjNy9usgS04f6NDV__SM06XSGNt80_Ip8C0s5i9qhNSbrWYEYJYO290PRl7NJXY4WyWK1P45EibSTYELErhl8-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:12 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=VUL.lQW0NXciZQ1MTjpgBjAjhxg5_pEINwp_w_9Ugyj6XCLYlZR9ocl5cyk.TSJji_AHl1VXDNHzKG9fVYakN4gZEKaZC3DwZsj6km90XfA-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:17 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
-      - '3651'
+      - '3650'
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '93'
+      - '60'
       Server:
       - ATS
       Age:
-      - '3'
+      - '1'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -675,7 +675,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -877,7 +877,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -1348,7 +1348,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -1534,7 +1534,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -1718,7 +1718,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -1728,12 +1728,12 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "82.403898239136ms",
+                "time": "52.188158035278ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:12 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:16 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.223791/settings?format=json
@@ -1748,7 +1748,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -1759,30 +1759,30 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:14 GMT
+      - Sat, 29 Jan 2022 02:40:18 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - ebqk5tdgv92oe
+      - 2cbo1mtgv9a8i
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-447kv
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-b2vsz
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=7PvytFerF3diiC49j0eGqgNroxHajKtxlAAIGziiN1I5i.RpZ4kSV73RjgGMnGkzKnYvxmaj5pRnL7IA.NAKt4VjnN6JEO.kX_3wjs5Y7qc-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:14 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=ti3Cfay3NXf89vTXHM0cPwWJJ0uXRs3szLbvxTP_8DIabXBZnL6y3F8p7KTrvHn5wlxM3E7f5jcErXL3H0K8SqGNiu05M4h4gN2SN8gEIYI-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:18 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
-      - '1626'
+      - '1627'
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '25'
+      - '26'
       Server:
       - ATS
       Age:
@@ -2166,12 +2166,12 @@ http_interactions:
                         ]
                     }
                 ],
-                "time": "18.471956253052ms",
+                "time": "19.432067871094ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:13 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:17 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/team/410.l.224111.t.3/roster?format=json
@@ -2186,7 +2186,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -2197,30 +2197,30 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:15 GMT
+      - Sat, 29 Jan 2022 02:40:19 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - 5olt0sdgv92of
+      - e1oguq9gv9a8j
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-fcz8c
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-st87g
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=kx0ntIyqF3ehSi4WXh4peDYGaoNqpBA87L_caABfyCo44aL8qWB94Px1UrjWfbNdr612HnN34WIh.J._LBniLqgyJIZ7biRvwWrpfPWi3Os-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:15 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=8CMS_oC2NXc5X2e1N8_t_.TsI4a.EJ4FP3cVPTkNsDlGjPmrKRRM4OXqgms8sT8IpQhfyAXz7GR7HWL0PLBeLc6VGPQ36F6se_ofto0_ssQ-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:19 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
-      - '3766'
+      - '3765'
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '65'
+      - '117'
       Server:
       - ATS
       Age:
@@ -2442,8 +2442,8 @@ http_interactions:
                                                     }
                                                 },
                                                 {
-                                                    "status": "GTD",
-                                                    "status_full": "Game Time Decision"
+                                                    "status": "O",
+                                                    "status_full": "Out (short-term injury)"
                                                 },
                                                 {
                                                     "injury_note": "Lower Leg"
@@ -2505,7 +2505,7 @@ http_interactions:
                                                     "has_recent_player_notes": 1
                                                 },
                                                 {
-                                                    "player_notes_last_timestamp": 1643403759
+                                                    "player_notes_last_timestamp": 1643416908
                                                 }
                                             ],
                                             {
@@ -2523,7 +2523,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -2618,7 +2618,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -2922,7 +2922,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -3021,7 +3021,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -3120,7 +3120,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -3420,7 +3420,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -3527,7 +3527,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -3634,12 +3634,12 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "57.283163070679ms",
+                "time": "107.59997367859ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:14 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:18 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.224111/settings?format=json
@@ -3654,7 +3654,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -3665,30 +3665,30 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:16 GMT
+      - Sat, 29 Jan 2022 02:40:20 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - bnpf7bpgv92og
+      - cupr849gv9a8k
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-tz6r2
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-46kp9
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=fIZDIRm1F3c6mumZdsU0eyXQtkbQYmtxIhd.fru1DVfaBFnsgaqgLfCRDpSMWYo3hFHsQjqwhKPOUetZ7LuKV27k9MfSEoYstjdqYmEFCX4-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:16 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=J6KXKxexNXcgF2S2hBI47_hzd9ZxUEam402vhEe7JJ.wrxajpCYkpOfxIIDBKuCMTRb7IoFiUTYaDb3ODGjRzpv_AGVrXs8ik9fUiUiGxSA-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:20 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
-      - '1627'
+      - '1628'
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '31'
+      - '27'
       Server:
       - ATS
       Age:
@@ -4072,12 +4072,12 @@ http_interactions:
                         ]
                     }
                 ],
-                "time": "20.808219909668ms",
+                "time": "20.853996276855ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:16 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:19 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.223791/teams?format=json
@@ -4092,7 +4092,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -4103,22 +4103,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:18 GMT
+      - Sat, 29 Jan 2022 02:40:21 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - cshbqihgv92oi
+      - aincikhgv9a8l
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-vgmrx
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-pght2
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=8mElVhW3F3cpH93epu727faKvJLBeP2p5RFVU82q5ngOVNtUQmuxxbA9MoY.LAg1Y_cLpMLqk0mhl3CF_MoV8567VzxGe_QH0_Jg3DYwZvY-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:18 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=eJx_m_ywNXe83mQHt.z8INtifaLC44dzrmoaTGhwqXMSIRb4Dk1NM4khkDuMC8qvEZX4Z5O71O_9QnMr8kTVVUumWRYcVY7bHYhaTuoUk7Y-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:21 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
@@ -4126,11 +4126,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '164'
+      - '210'
       Server:
       - ATS
       Age:
-      - '1'
+      - '2'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -5100,12 +5100,12 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "152.01497077942ms",
+                "time": "200.42181015015ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:17 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:21 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/team/410.l.223791.t.6/roster?format=json
@@ -5120,7 +5120,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -5131,22 +5131,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:19 GMT
+      - Sat, 29 Jan 2022 02:40:22 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - ajtc0hhgv92oj
+      - 6f5onptgv9a8m
       X-Yahoo-Host:
-      - fantasy-sports-api--pub-base-production-bf1-6d5ccfb9cd-lnl7g
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-h24nz
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=vtTTagK2F3cbeSGNAh_EUIFbtp60.bRXd_TvYLhobkU1Dy4hFzbBEgYneblE3cIC0_9etebA7F22HS6dQ3JF47s.NniLkTyysC0fojZr63w-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:19 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=ccQSvpGzNXfgltH5De5wcZoLw2AsInPgbL.xl36UZVPirW_DmgfeBDv8sYoBnNyF_geKGAqMKw4BJUE1065iYNz9gIXmjul4sYw4a3JVllc-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:22 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
@@ -5154,11 +5154,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '59'
+      - '65'
       Server:
       - ATS
       Age:
-      - '1'
+      - '3'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -5445,7 +5445,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -5647,7 +5647,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -6118,7 +6118,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -6304,7 +6304,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -6488,7 +6488,7 @@ http_interactions:
                                                 ]
                                             },
                                             {
-                                                "is_editable": 1
+                                                "is_editable": 0
                                             }
                                         ]
                                     },
@@ -6498,12 +6498,12 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "51.818132400513ms",
+                "time": "56.030035018921ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:18 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:22 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/players;player_keys=410.p.6016,410.p.5842,410.p.4840,410.p.5601,410.p.5294,410.p.5073,410.p.5835,410.p.4245,410.p.4913,410.p.5192,410.p.4906,410.p.5015,410.p.5295/stats?format=json
@@ -6518,7 +6518,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -6529,22 +6529,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:20 GMT
+      - Sat, 29 Jan 2022 02:40:23 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - cmlfbbhgv92ok
+      - 8fj6oj9gv9a8n
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-68d64
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-kdfzd
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=vB84EDmxF3cfCL6DAP1rcd86GnNaK6r1FoqvJZp39cis2BRY7d7WKIwdeLSAJ9f1qYBwdlhYcFSdk7nqXex7hr9mYwnfLL1eeGBmq1dR_ZU-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:20 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=Uafqxq.yNXfGlVX3e0w7COLYp5Q63jrL.6u_DKOKbnLSo4rweTyTfmedbmxZXJbbuQ0uUePia57Os8Bm4hnpC43Fc92hCkH3Kxm0RikheHQ-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:23 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
@@ -6552,11 +6552,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '36'
+      - '28'
       Server:
       - ATS
       Age:
-      - '0'
+      - '3'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -11201,12 +11201,12 @@ http_interactions:
                     },
                     "count": 13
                 },
-                "time": "24.138927459717ms",
+                "time": "19.999980926514ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:20 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:23 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.223791/players;player_keys=410.p.6016,410.p.5842,410.p.4840,410.p.5601,410.p.5294,410.p.5073,410.p.5835,410.p.4245,410.p.4913,410.p.5192,410.p.4906,410.p.5015,410.p.5295/stats?format=json
@@ -11221,7 +11221,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -11232,22 +11232,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:21 GMT
+      - Sat, 29 Jan 2022 02:40:24 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - 2cm2iq9gv92ol
+      - 5f8j08lgv9a8o
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-ft5pn
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-n25zm
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=PHFKcWezF3cj4imbaBP0Un7Zg4LuoHxLjt6oSdiD5dYKac6_gy59WspHdppQk2S0qJBv.YQJx_ItjTvkEbqHxQJmcg2Kp.vjY4rBewpzCUM-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:22 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=osPdjUa9NXeFIqRnotZdLRrqlHYbTpnfBSKyfLc3NAH8SBqgHmKFuajPL_bfBjepV44DO_q_DCHaotg3JXMPA7BqwwhlxW2pyQuo85lwhOI-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:24 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
@@ -11255,7 +11255,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '40'
+      - '43'
       Server:
       - ATS
       Age:
@@ -14740,12 +14740,12 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "30.159950256348ms",
+                "time": "32.265901565552ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:22 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:24 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/team/410.l.223791.t.1/roster?format=json
@@ -14760,7 +14760,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -14771,34 +14771,34 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:23 GMT
+      - Sat, 29 Jan 2022 02:40:25 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - as61f5tgv92on
+      - d608tpdgv9a8p
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-r496d
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-m8wb8
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=2g56O.ayF3fbvCJm2q7sbkxmNCq9B6d1oLPidGD2bzm0uaQJ.S4cNFhjEdXo48tY3Gg6LDYxdyMRB3dHlrlgkobhYHx8e6f03vWdLHrw2Mc-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:23 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=QDglvti8NXdS9dCx7pQF7nDdhweYWkKepI5c_TRPjyXdrS...uyY1_XLnYXuYcSP6JD8hFVF7fBfMCSuJmX5n02_SgyglBbYbD.KJk7iek4-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:25 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
-      - '3529'
+      - '3530'
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '97'
+      - '78'
       Server:
       - ATS
       Age:
-      - '2'
+      - '3'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -16111,12 +16111,12 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "87.354898452759ms",
+                "time": "64.897060394287ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:23 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:25 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/players;player_keys=410.p.5650,410.p.5317,410.p.3930,410.p.5651,410.p.5905,410.p.6403,410.p.5892,410.p.4290,410.p.6216,410.p.6164,410.p.4561,410.p.4244,410.p.6025/stats?format=json
@@ -16131,7 +16131,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -16142,22 +16142,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:25 GMT
+      - Sat, 29 Jan 2022 02:40:26 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - 4l23bjhgv92op
+      - ee9qp5lgv9a8q
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-ft5pn
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-dppjr
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=uyEQCui8F3c4gTXZ8VCw4Q.PsED.jRDQgMBPHqZIeAtDvRHuqDiRbgll0WZ9LbGlVsdnFAbOYRT.t3BHMB.sC3jw4TZ.k3nCSpBH7NWWB1M-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:25 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=vAeyoOO_NXe_M698FqUlsyUr3sR5jwa79AOCiygUig.wT12ZtqyRFuHtc3cbmufkX3fazoZOhCmeLHWGnRcHC6ASurabbwKJIZRM_EYHlLo-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:26 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
@@ -16165,11 +16165,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '36'
+      - '29'
       Server:
       - ATS
       Age:
-      - '0'
+      - '2'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -20811,12 +20811,12 @@ http_interactions:
                     },
                     "count": 13
                 },
-                "time": "24.492025375366ms",
+                "time": "20.496129989624ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:25 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:26 GMT
 - request:
     method: get
     uri: https://fantasysports.yahooapis.com/fantasy/v2/league/410.l.223791/players;player_keys=410.p.5650,410.p.5317,410.p.3930,410.p.5651,410.p.5905,410.p.6403,410.p.5892,410.p.4290,410.p.6216,410.p.6164,410.p.4561,410.p.4244,410.p.6025/stats?format=json
@@ -20831,7 +20831,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer e13Ax7ubuBvFoZ8xk.ipht5Kg1TqSAGBjQP5QbqCww2a8dVR2KIVWt1tNG61uUIZc1gkMbsk.hsvhnzc9zQJ0Lh70x3EnLNlguJyGp_1.lQQX8UkDtdTfmsUZZQtQfayZc9K3iAzWJjXEdHuk139egxEcucBftKFWoFoJ6xfOWKUfELYq6jOwhax8OtlkVDypHLFF75hOB_CMplBGt54n6HMnJ1usX_0uYXY.0tqba5vfYEI9PdB8JikiNVEIR65nxFvZxPn.eZTSn6rLcHGf3Hyg4MuaDTSF4PcrN33rVczqn0pvn9MyI7SNNMU3nD8e5o20kxPVtmjlN_RfgzhrIF4wN8DIJGWtj1Gh600PzLwoZ.niqSpYqALDdMNdPhswhwOYU4bOonNnYMxxJ5A3nyfXdvEuf6TV5DEIT2iMSNVEjrcU5ka.JbYyNNr1rNGqNZetsQNE7Hb0XWV31xNkScDj..v6ckQqWpgxmt4u1HmZ8iz9xo8Nx2CPcCMDZl3izKvl74Cuj5ohLufGOVhWOCbiUqUQY_cMV5k76vbxxGm4vck91TzTNgFy6WZFSC7QWniVtjxaF09jb2JH7.wQbxLCJL7nxfTNWWfQaMstPYl.do53RN9ngMxU4jNZpP7MS3udCn.NLynSv7cttHYE0ALQKr5_RXz65D_m1z1jKVeLjca0XQoiWE79Ad6RUSuHGU8T9XHve_cnhzzhavPf0IENh3HDBnUk9W5LkBtt2R6NGPLOxCosVE4L6Fv77Ivb5D9VMX6ALgwh8vnJDOyAUYCCdfwJkH0PmdDJRyVkIx4LP6okoY2LwPA6iTDsyfIztoLe1e3Fzrl5A93zVan9NV5bd6MxLOcoQqAXZ0vBoHkwpubCgqzNZJLW4OWObb_yvMHGnFxo7e5yurc1AaqRPnLK2Tcp1PEfpKAp4aFfJtkp11DvAicsbBEuQafSDXWVlA3o_6.KGspSqfQWzB1K_1bCR7r_7ImgmajLjSyaIIegDDmcZX5ou4jX6Wc3ZSi1v8a1isDRQ5Em6q40uIVaJTElUcZ7TFWVC0HdOY-
+      - Bearer yWv4CKmbuBuLEYeK484O5PFYM37oxzv8OhF9vBxv2N.Sb4E3pRlFUoXZHXqgt6PaWqBvLxVdtKecoSdS.tb7byM3u.jhCDuZHXzvBnVeu_eBu8ko7odyKVzjOnCRKZipKJ1luPYRgMjRFV2rLb9ulbx673_duwz5HZOyi4fLlCiUc80xhNMJJJ_62hxYxXyTWKGb8bfOu3KDpmfGAHCA0IaXi7Oq3j6K01cablUhl3ensSLdhuuoZj9GsFsI8C6zsXVYVcHM8lsK9rNUh4TMimHcWTDvvdh9WWSCC2J4ZMTE9e1irjp0puAGR313SDymQX0A1c1WYducMVY.DKARC5umCtjQ6m6expjjWXRDHxNbowleTvTKS8BgRV8Hh3Q6SO394dhhXhBh2._Fs0CTjmMjfCVFiOlyMSrhlkIxqs_BU_TU5MDXNmd2rWPk0YHAlnZKZ93mBYaFyDeAkh1zU7S4VTdC1EEuLgwfX2eUom6iH4R7tDV8Odv0kKxx08l45UetIdI7fEQOUqN49XjHQuB0bZwjiUrNLNr50GkpqNjSm8okHW1hcvRHdULBc095LlZ9XHGPxzQ1iZjzSBv_gSzbLy4p_QuZDkbax0BZexOhgNkuSo98SIAtiyIk4TllH3.RpHSfITQyyFDPSVnFw0NO2dUDOzEO.fNRpm3qQLQSHKAcBcOv8.YUD5DIj47FnHQrKdjU2N4_tPzQKy8DUL.EafEQX2ZZ8LxNiaCJcygjFv6x8Putc2vyAW2FHkghKdlxWoJFyMqBVNmxsHBySIUDiPZRSGl_Q_gbP8lorLXSCjRBb4TyC4fDUc_z7FcL_pK6W03QvWt.vXNfAW97Sq2ZSQvF8XguCfUSgbf0AvCRXQIk1HGPBPn_hPbOvQlGllvNo1Ch9rfI8jPvfeznhvxPX8y41xwz1xZc09Rrcwl4FgYiCmJA4MN03Od15T_U0MufBzZkJYKYrx5AvlTom2p50y.bRc0ATIC3SXYc_T17Vs8vaiZ9hDx_Mc_McZxzwc_uSb08ARosOAgcKzQoMr7Rzsv.IehQFR9km5M-
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -20842,22 +20842,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 00:32:27 GMT
+      - Sat, 29 Jan 2022 02:40:27 GMT
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
         PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
       X-Yahoo-Request-Id:
-      - 35gop09gv92or
+      - 3hnjsqlgv9a8r
       X-Yahoo-Host:
-      - fantasy-sports-api--public-production-bf1-54fcc6b474-x45tl
+      - fantasy-sports-api--public-production-bf1-54fcc6b474-shb5n
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Origin,Accept-Encoding
       Set-Cookie:
-      - SPTB=d=xZJv_2m.F3d_bM5m_nHsvDKzY5ry647CU2RjrqdiUhyuor0IM6ULPDltEYEv7dLBcpK.NNcq9.x17x6bHD.0qKzz4ZXxoVcK6g2YMvKoM_Y-&v=1;
-        expires=Mon, 28-Feb-2022 00:32:27 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
+      - SPTB=d=N_M_HOK.NXdCWWNEWCoqGMpqqqD3v5GqKFgk0p3u0Kwtx8Q6mE6gFefghCFD6B0P8FsmqphPYJgr.ykhP5BZA3Y2Ecikb0RI5XstrA7AgbA-&v=1;
+        expires=Mon, 28-Feb-2022 02:40:27 GMT; Max-Age=2592000; path=/; domain=fantasysports.yahooapis.com
       Cache-Control:
       - private,max-age=0,stale-while-revalidate=0,stale-if-error=0
       Content-Length:
@@ -20865,11 +20865,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Envoy-Upstream-Service-Time:
-      - '44'
+      - '41'
       Server:
       - ATS
       Age:
-      - '0'
+      - '2'
       Strict-Transport-Security:
       - max-age=15552000
       Referrer-Policy:
@@ -24365,10 +24365,10 @@ http_interactions:
                         }
                     }
                 ],
-                "time": "32.480955123901ms",
+                "time": "30.227184295654ms",
                 "copyright": "Data provided by Yahoo! and STATS, LLC",
                 "refresh_rate": "60"
             }
         }
-  recorded_at: Sat, 29 Jan 2022 00:32:27 GMT
+  recorded_at: Sat, 29 Jan 2022 02:40:27 GMT
 recorded_with: VCR 6.0.0
