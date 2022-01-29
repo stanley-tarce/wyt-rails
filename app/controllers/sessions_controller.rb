@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
         full_name = "#{auth_hash['info']['first_name']} #{auth_hash['info']['last_name']}"
         User.create_with(full_name: full_name).find_or_create_by(email: auth_hash['info']['email']).update(access_token: auth_hash['credentials']['token'], refresh_token: auth_hash['credentials']['refresh_token'], expiry: auth_hash['credentials']['expires_at'],image: auth_hash['info']['image'])
         Session.create(user:User.find_by(email: auth_hash['info']['email']), token: auth_hash['credentials']['token'])
+        puts Session.last.inspect
         redirect_to "http://localhost:3000/callback?token=#{Base64.encode64(auth_hash['credentials']['token'])}" unless Rails.env.test?
       end
     end
