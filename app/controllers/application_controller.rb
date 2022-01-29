@@ -58,12 +58,12 @@ class ApplicationController < ActionController::API
     params.permit(:league_key, :team_key, :player_keys)
   end
 
-  def get_token_from_trade_params
-    Trade.find_by(id: params[:trade_id]).league.user.access_token 
-  end
+  # def get_token_from_trade_params
+  #   Trade.find_by(id: params[:trade_id]).league.user.access_token 
+  # end
 
   def current_user_from_trade_params
-    get_token_from_trade_params && User.find_by(access_token: get_token_from_trade_params) ? User.find_by(access_token: get_token_from_trade_params) : nil
+    Trade.find_by(id: params[:trade_id]).present? ? Trade.find_by(id: params[:trade_id]).league.user : nil
   end
 
   def updated_token_from_trade_params
