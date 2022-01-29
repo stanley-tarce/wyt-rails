@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 28 Jan 2022 14:39:04 GMT
+      - Sat, 29 Jan 2022 00:38:03 GMT
       Cache-Control:
       - must-revalidate
       - no-cache
@@ -41,7 +41,7 @@ http_interactions:
       Server:
       - ATS
       Age:
-      - '2'
+      - '0'
       Connection:
       - close
       Strict-Transport-Security:
@@ -50,6 +50,6 @@ http_interactions:
       - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
     body:
       encoding: UTF-8
-      string: '{"access_token":"cyjqTDebuBtbzG2pvL42PJYl4MJzvqaURuFuH2YOStdExL4jyFpnFPr.UJ9vjLqW1_t_Y8mPJ2Ap6VcISTBgJRjHU.jWWvjTog9O1Ew5xZp3psrUb9c3ptW0afROi7W9kzcjzUACtjc8qzzGFoN2D4bpoKlCLI8eVkgri5V545MqveYGHL1_OcQScgUCLOGnbo45z.jZJNObXDPKwTtr3kZp397xAgv0eSfvL5QHvVPzR_MMfRvQGW8XbBAsiqYcytNJbY6Hw49E31ZMaavu20K0G8o9ocCuNnHjtUO8ZdYn7S3CZb8nXIlSYwxy3fGSEgjtq25uMFadq4SOHH_Wsbn82Np6UWuA8N45vuo_pyKgj6nWdPsCzwIp.DCix0iK30UidKaBBVY0oDsmRLF8LZGs59R92wBdIf6yppjc4OXXQ0.2Z06rbglnmBhJlHxHpHTh4eXvFl.ZReufJ_7y0GoB_7.wTlnJ.kSKdwHChbBjmAOzd8x8HAVQd28jqqmARThhqnKYxQM.uET5g8_1RW1ONpW9198XF_S_WFvoZvRz0qQRSW8RD8EZ0_LHnwNh7ubk00LsxuZIo2HZYRb9TjRua5eIGArjWKhY3maPsDFiNq_B5AoOgvJByJIWubtUGoVYeinyGxhxVp7vBoZ_yEy6R.wN.ogMCg3YIA.BNpRCfDCt2a4gKSf6j2XcD4iTaMW.htiKqGoeh9FCaa8hsCh18m2kdgPDBxEnskhwP04PWLcKeqADKHeSMyIwMXySFphk9mzeNYBppE2La7zvZKrlwNtSFb7WB4i33qhBxwvKgzFdtGjPDksIBoTuDEZARiJBmpm2Txu1vHzDk05ywdVUBfTyoQi3OlaC0xFloJpJ2af7DPrSnfeLGFdhw9QgMmxLmfu76ZH1F6QPeCBSkOjG5kTn8thlySo87b4gjO42sw6LjFehCbI35whpnKUcBp_Yk73Pc_0DHd2JOJJfXQ7u19khi.V8ioH..2LdDNGLtmDA0eD9r2H6QgoYrTQEEypAAl6aieWf5tx9g.GDbtB_vIscB0FUQZdcHvY-","refresh_token":"AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB","expires_in":3600,"token_type":"bearer"}'
-  recorded_at: Fri, 28 Jan 2022 14:39:03 GMT
+      string: '{"access_token":"RH5ri6ibuBu4cKghNrNxthUdjydylBoilXfBW0Gv0MZ5HecFDBZp52ePt6Ns2JQnV5zGDc.HN5yHAYdBiDrPkEK0kHDBrORKVH8u.AHrxaU4Of4l4qLvm6gnYZyO6T8kTyuIsj_DnGnahqJ9UOCFG_7JtqVw777sq8uj8bUnaOIYhaxFliS4pyMTCrfUt4UTW23_mpg4MipC5OG9Wc44sIHw9Ec3tUY8CEGVqQwqQZH8mdWsWvBOELNoqMUETCWhow5.qJnQfkn0QaEXa4d3pmupqm8.rhvjsxBPweE5a1cwxv0GjdBLU4M5hRC14EUYCxmFQJzojU7qMQR7VP43UpbUovzju_STmAMjdmXUi.adJ1a3uhYgVjwfIEEFSDRwZaqLYVk6usTBS1oaMhRfOVQzqRxBPLuCElH4.TeoD2sqZXVb_T4e3_KB.GxN2wwg.KfwMdl4tq5AcA2OdwtTxEGJtKwnGZFkw6qVjudWm3lf6p6yWgMNnQarmg5p11CM5xVeODJSqOI0VDFzUlGlRPObkrbFmt03W2vNeJvjYgLVKuNZrrgX4tNUjoL.N7HZVFJF7EM8QSAU7IuCosQzrhKOvkY2iNwLEJZn70bm6kvQ5xW0f0rKMh8_wNaURJHD1gIx8bQWYIBocYdXKBWh5iENZyFmcvcZPkvRYuDnzRWx_SelM35sFr3Gs9JukDhhKjM6faj9caJF1Hv9mzYY4rEG0Txx4sjNRTdOERU9qxlLVnMzuJd8BAyBxgkmH5qy1U9CPvu.YoT3oONnU.eFW3WEDe2oQxbcJe5z.9_SLMvWtuc.8kOnOs0IHc7TsjcWrVnuC6zZbBXG7nf9m6_A8nIW5.u6SsA89btYWnC0TjowTPopvYbfGnpfuP4JpyHMWEQbBUSC1ipUkaYx4_K7zdckbLgN4OWLzkcaf1virpBeYA8rGNNS1iTmH2fGE2auX5dumGRmUkOOnFm5kak4XosAjU4FVyPVQqcfEXa2tq3r_BoGVxWwYmc.lgGVkawm69plU6B39GIg47Zzeg1KmvGRr6yHXqj0nXMGBf4-","refresh_token":"AIli2mG5W3C.4FZdv77yDkxML2DaEgcSe7s6HlPgj7bbxLap4YNrk5TQ.rn2G.DB","expires_in":3600,"token_type":"bearer"}'
+  recorded_at: Sat, 29 Jan 2022 00:38:02 GMT
 recorded_with: VCR 6.0.0
