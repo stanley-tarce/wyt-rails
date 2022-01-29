@@ -33,13 +33,17 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop-rspec', require: false # https://github.com/rubocop/rubocop-rspec
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'vcr'
+  gem 'webmock'
+  gem "vcr_better_binary"
 end
 
 group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
+  gem "rails-erd"
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -61,6 +65,4 @@ group :test do
 end 
 
 gem 'rest-client'
-gem 'vcr'
-gem 'webmock'
-gem "vcr_better_binary"
+
