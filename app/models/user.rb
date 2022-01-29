@@ -4,10 +4,11 @@ class User < ApplicationRecord
   has_many :leagues, dependent: :destroy
   validates :email, presence: true, uniqueness: true
   has_many :sessions
+  has_many :token_histories
 
   def refresh_token_from_trade_params
     refresh
-    Session.create(user: self, token: access_token)
+    TokenHistory.create(user: self, access_token: access_token, refresh_token: refresh_token, expiry: expiry)
   end
 
   def refresh_token_if_expired
