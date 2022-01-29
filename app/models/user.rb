@@ -7,13 +7,16 @@ class User < ApplicationRecord
 
   def refresh_token_from_trade_params
     newtoken = refresh
-    Session.create(user: self, token: access_token)
+    # Session.create(user: self, token: access_token)
     return newtoken
   end
 
   def refresh_token_if_expired
     refresh
     Session.create(user: self, token: access_token)
+    self.access_token = response[:data]['access_token']
+    self.expiry = Time.now.to_i + response[:data]['expires_in'].to_i
+    save
   end
 
   private
@@ -21,9 +24,7 @@ class User < ApplicationRecord
   def refresh
     response = Yahoo::Refresh.call({ 'refresh_token': refresh_token, 'client_id': ENV['WYT_RAILS_CONSUMER_KEY'],
                                      'client_secret': ENV['WYT_RAILS_CONSUMER_SECRET'], 'grant_type': 'refresh_token' })
-    self.access_token = response[:data]['access_token']
-    self.expiry = Time.now.to_i + response[:data]['expires_in'].to_i
-    save
+
     return response[:data]['access_token']
   end
 end
