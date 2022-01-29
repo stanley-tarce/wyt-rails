@@ -5,7 +5,6 @@ module Api
     prepend_before_action :authenticate_user!, only: %i[index create owner delete update]
     before_action :check_token, only: %i[index create owner delete update] # Order
     append_before_action :set_response_header, only: %i[index create owner delete update]
-    before_action :show_token_if_user, only: [:show]
     def index
       render json: trades.by_ascending, status: :ok
     end

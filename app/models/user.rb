@@ -6,8 +6,7 @@ class User < ApplicationRecord
   has_many :sessions
 
   def refresh_token_from_trade_params
-    refresh
-    Session.create(user: self, token: access_token)
+    return refresh
   end
 
   def refresh_token_if_expired
@@ -23,5 +22,6 @@ class User < ApplicationRecord
     self.access_token = response[:data]['access_token']
     self.expiry = Time.now.to_i + response[:data]['expires_in'].to_i
     save
+    return response[:data]['access_token']
   end
 end

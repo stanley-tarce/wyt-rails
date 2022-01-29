@@ -67,7 +67,7 @@ class ApplicationController < ActionController::API
   end
 
   def updated_token_from_trade_params
-    current_user_from_trade_params.access_token
+    current_user_from_trade_params.refresh_token_from_trade_params
   end
 
   def trade_param_token_expired?
