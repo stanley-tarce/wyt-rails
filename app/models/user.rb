@@ -6,8 +6,9 @@ class User < ApplicationRecord
   has_many :sessions
 
   def refresh_token_from_trade_params
+    newtoken = refresh
     Session.create(user: self, token: access_token)
-    return refresh
+    return newtoken
   end
 
   def refresh_token_if_expired
