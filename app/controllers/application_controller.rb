@@ -3,18 +3,18 @@
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
 
-
   private
 
   def current_user
-    token && Session.find_by(token: token) ?  Session.find_by(token: token).user : nil
+    token && Session.find_by(token: token) ? Session.find_by(token: token).user : nil
   end
 
   def user_authenticated?
-    current_user.present? 
+    current_user.present?
   end
 
-  def require_token # Can call or not call this method
+  # Can call or not call this method
+  def require_token
     if request.headers['Authorization'].nil?
       render json: { error: 'Unauthorized', status: 401 }, status: 401
     else
@@ -30,14 +30,12 @@ class ApplicationController < ActionController::API
 
   def token
     return request.headers['Authorization'].gsub('Bearer ', '') if request.headers['Authorization']
+
     nil
   end
 
   def check_token
-    if token_expired?
-      return current_user.refresh_token_if_expired
-    end
-
+    return current_user.refresh_token_if_expired if token_expired?
   end
 
   def token_expired?
@@ -46,6 +44,7 @@ class ApplicationController < ActionController::API
 
     false
   end
+
   def set_response_header
     response.headers['Authorization'] = current_user.access_token
   end
@@ -54,12 +53,13 @@ class ApplicationController < ActionController::API
     return render json: { error: 'No Access Token' }, status: 401 if token.nil?
     return render json: { error: 'Invalid Token' }, status: 401 unless user_authenticated?
   end
+
   def user_params
     params.permit(:league_key, :team_key, :player_keys)
   end
 
   # def get_token_from_trade_params
-  #   Trade.find_by(id: params[:trade_id]).league.user.access_token 
+  #   Trade.find_by(id: params[:trade_id]).league.user.access_token
   # end
 
   def current_user_from_trade_params
@@ -76,18 +76,16 @@ class ApplicationController < ActionController::API
 
     false
   end
+
   def check_token_expiry_from_trade_params
-    if trade_param_token_expired? 
-      return current_user_from_trade_params.refresh_token_from_trade_params
-    end
-    rescue NoMethodError
-      render json: { error: 'Error Fetching Trade Data' }, status: 400
+    return current_user_from_trade_params.refresh_token_from_trade_params if trade_param_token_expired?
+  rescue NoMethodError
+    render json: { error: 'Error Fetching Trade Data' }, status: 400
   end
 
   def show_token_if_user
-      check_token_expiry_from_trade_params
+    check_token_expiry_from_trade_params
   end
-  
-  
+
   # will run before_action :check_token_expired? and before_action :authenticate_user!
 end
