@@ -13,14 +13,6 @@ class ApplicationController < ActionController::API
     current_user.present?
   end
 
-  # Can call or not call this method
-  def require_token
-    if request.headers['Authorization'].nil?
-      render json: { error: 'Unauthorized', status: 401 }, status: 401
-    else
-      @access_token = request.headers['Authorization'].gsub('Bearer ', '')
-    end
-  end
 
   def updated_token
     return current_user.access_token if current_user
@@ -58,9 +50,6 @@ class ApplicationController < ActionController::API
     params.permit(:league_key, :team_key, :player_keys)
   end
 
-  # def get_token_from_trade_params
-  #   Trade.find_by(id: params[:trade_id]).league.user.access_token
-  # end
 
   def current_user_from_trade_params
     Trade.find_by(id: params[:trade_id]).present? ? Trade.find_by(id: params[:trade_id]).league.user : nil
@@ -70,22 +59,6 @@ class ApplicationController < ActionController::API
     current_user_from_trade_params.refresh_token_from_trade_params
   end
 
-  def trade_param_token_expired?
-    expiry = Time.at(current_user_from_trade_params.expiry.to_i)
-    return true if expiry < Time.now
-
-    false
-  end
-
-  def check_token_expiry_from_trade_params
-    return current_user_from_trade_params.refresh_token_from_trade_params if trade_param_token_expired?
-  rescue NoMethodError
-    render json: { error: 'Error Fetching Trade Data' }, status: 400
-  end
-
-  def show_token_if_user
-    check_token_expiry_from_trade_params
-  end
 
   # will run before_action :check_token_expired? and before_action :authenticate_user!
 end
