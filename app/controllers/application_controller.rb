@@ -85,6 +85,7 @@ class ApplicationController < ActionController::API
 
   def show_token_if_user
       check_token_expiry_from_trade_params
+      puts "nice"
   end
   
   
