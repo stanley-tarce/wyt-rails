@@ -9,7 +9,7 @@ origin = Rails.env == 'development' ? '*' : 'https://wyt-react.vercel.app/' #cha
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins  origin
+    origins  '*'
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
