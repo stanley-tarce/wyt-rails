@@ -10,9 +10,10 @@ module Api
     end
 
     def show
-      league = Yahoo::Client.league(updated_token_from_trade_params, trade.league.league_key)
-      user_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.league.team_key)
-      totrade_roster = Yahoo::Client.players(updated_token_from_trade_params, trade.team_key)
+      token = updated_token_from_trade_params
+      league = Yahoo::Client.league(token, trade.league.league_key)
+      user_roster = Yahoo::Client.players(token, trade.league.team_key)
+      totrade_roster = Yahoo::Client.players(token, trade.team_key)
       user_roster_keys = []
       user_other_roster_keys = []
       players_to_send = []
@@ -28,9 +29,9 @@ module Api
         user_other_roster_keys << player[:player_key].to_s
       end
 
-      user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key,
+      user_player_stats = Yahoo::Client.player_stats(token, trade.league.league_key,
                                                 user_roster_keys.join(','))
-      other_user_player_stats = Yahoo::Client.player_stats(updated_token_from_trade_params, trade.league.league_key, user_other_roster_keys.join(','))
+      other_user_player_stats = Yahoo::Client.player_stats(token, trade.league.league_key, user_other_roster_keys.join(','))
 
       
       trade.sent_players.each do |player|
