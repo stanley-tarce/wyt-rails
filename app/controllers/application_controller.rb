@@ -59,19 +59,19 @@ class ApplicationController < ActionController::API
   end
 
   def get_token_from_trade_params
-    Trade.find_by(id: params[:trade_id]).league.user.token_histories.last.access_token
+    Trade.find_by(id: params[:trade_id]).league.user.access_token 
   end
 
   def current_user_from_trade_params
-    get_token_from_trade_params && TokenHistory.find_by(access_token: get_token_from_trade_params) ? TokenHistory.find_by(access_token: get_token_from_trade_params).user : nil
+    get_token_from_trade_params && User.find_by(access_token: get_token_from_trade_params) ? User.find_by(access_token: get_token_from_trade_params) : nil
   end
 
   def updated_token_from_trade_params
-    current_user_from_trade_params.token_histories.last.access_token
+    current_user_from_trade_params.access_token
   end
 
   def trade_param_token_expired?
-    expiry = Time.at(current_user_from_trade_params.token_histories.last.expiry.to_i)
+    expiry = Time.at(current_user_from_trade_params.expiry.to_i)
     return true if expiry < Time.now
 
     false
@@ -81,11 +81,12 @@ class ApplicationController < ActionController::API
     if trade_param_token_expired? 
       return current_user_from_trade_params.refresh_token_from_trade_params
     end
+    rescue NoMethodError
+      render json: { error: 'Error Fetching Trade Data' }, status: 400
   end
 
   def show_token_if_user
       check_token_expiry_from_trade_params
-      puts "nice"
   end
   
   
