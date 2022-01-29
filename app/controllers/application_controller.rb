@@ -51,6 +51,7 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate_user!
+    puts Session.find_by_token(token).user.inspect
     return render json: { error: 'No Access Token' }, status: 401 if token.nil?
     return render json: { error: 'Invalid Token' }, status: 401 unless user_authenticated?
   end
