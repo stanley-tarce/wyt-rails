@@ -71,7 +71,7 @@ module Api
         totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key], player_team_full:   player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: clean_stat4}
       end
 
-      out = { id: trade.id,league_name:trade.league.league_name, user_team_name: trade.league.team_name, user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: totrade_other_roster }
+      out = { id: trade.id,league_name:trade.league.league_name, user_team_name: trade.league.team_name, user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: totrade_other_roster, league: trade.league }
       render json: out, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { message: 'Trade Not Found' }, status: 404
