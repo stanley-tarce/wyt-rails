@@ -210,8 +210,6 @@ module Api
     end
 
     def organized_roster_from_db(trade, user)
-      return {} unless trade.present? && user.present?
-
       container = []
       trade.each do |player|
         stat = begin
@@ -225,11 +223,11 @@ module Api
         end
         roster = user[:roster].find { |roster| roster['player_key'] == player.player_key }
         unless roster.nil? || stat.nil?
-          container << { player_name: player.player_name, player_key: player.player_key,
+          container << { player_name: "123", player_key: player.player_key,
                          player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat }
         end
       end
-      container
+      return container
     end
 
     def organized_roster_from_api(user, keys_from_db)
