@@ -9,7 +9,7 @@ module Api
       render json: trades.by_ascending, status: :ok
     end
 
-    def show_v2
+    def show
       token = updated_token_from_trade_params
       league = Yahoo::Client.league(token, trade.league.league_key)
       user = roster_stats(trade.league.team_key, trade.league.league_key, token)
@@ -19,105 +19,12 @@ module Api
       players_to_receive = organized_roster_from_db(trade.received_players, partner)
       user_other_roster = organized_roster_from_api(user, players_array)
       partner_other_roster = organized_roster_from_api(partner, players_array)
-      puts players_to_send
-      puts players_to_receive
       out = { id: trade.id, league_name: trade.league.league_name, user_team_name: trade.league.team_name,
               user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: partner_other_roster, league: league[:data][:league] }
       render json: out, status: :ok
     end
 
-    def show
-      token = updated_token_from_trade_params
-      league = Yahoo::Client.league(token, trade.league.league_key)
-      user_roster = Yahoo::Client.players(token, trade.league.team_key)
-      totrade_roster = Yahoo::Client.players(token, trade.team_key)
-      user_roster_keys = []
-      user_other_roster_keys = []
-      players_to_send = []
-      players_to_receive = []
-      user_other_roster = []
-      totrade_other_roster = []
-      players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
-
-      user_roster[:data][:players].each do |player|
-        user_roster_keys << player[:player_key].to_s
-      end
-      totrade_roster[:data][:players].each do |player|
-        user_other_roster_keys << player[:player_key].to_s
-      end
-
-      user_player_stats = Yahoo::Client.player_stats(token, trade.league.league_key,
-                                                     user_roster_keys.join(','))
-      other_user_player_stats = Yahoo::Client.player_stats(token, trade.league.league_key,
-                                                           user_other_roster_keys.join(','))
-
-      trade.sent_players.each do |player|
-        stat1 = user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player.player_key }[0]
-        clean_stat1 = begin
-          stat1.except('player_key')
-        rescue StandardError
-          stat2
-        end
-        roster = user_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
-        if !(roster.nil? || stat1.nil?)
-          players_to_send << { player_name: player.player_name, player_key: player.player_key,
-                               player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: clean_stat1 }
-        else
-          players_to_send << dropped(player)
-        end
-      end
-      trade.received_players.each do |player|
-        stat2 = other_user_player_stats[:data][:player_stats].select do |stat|
-                  stat['player_key'] == player.player_key
-                end                [0]
-        clean_stat2 = begin
-          stat2.except('player_key')
-        rescue StandardError
-          stat2
-        end
-        roster = totrade_roster[:data][:players].select { |roster| roster[:player_key] == player.player_key }[0]
-        if !(roster.nil? || stat2.nil?)
-
-          players_to_receive << { player_name: player.player_name, player_key: player.player_key,
-                                  player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: clean_stat2 }
-        else
-          players_to_receive << dropped(player)
-        end
-      end
-
-      user_roster[:data][:players].each do |player|
-        next if players_array.include? player[:player_key].to_s
-
-        stat3 = user_player_stats[:data][:player_stats].select { |stat| stat['player_key'] == player[:player_key] }[0]
-        clean_stat3 = begin
-          stat3.except('player_key')
-        rescue StandardError
-          stat4
-        end
-        user_other_roster << { player_name: player[:player_name], player_key: player[:player_key],
-                               player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: clean_stat3 }
-      end
-      totrade_roster[:data][:players].each do |player|
-        next if players_array.include? player[:player_key].to_s
-
-        stat4 = other_user_player_stats[:data][:player_stats].select do |stat|
-                  stat['player_key'] == player[:player_key]
-                end                [0]
-        clean_stat4 = begin
-          stat4.except('player_key')
-        rescue StandardError
-          stat4
-        end
-        totrade_other_roster << { player_name: player[:player_name], player_key: player[:player_key],
-                                  player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: clean_stat4 }
-      end
-
-      out = { id: trade.id, league_name: trade.league.league_name, user_team_name: trade.league.team_name,
-              user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: totrade_other_roster, league: league[:data][:league] }
-      render json: out, status: :ok
-    rescue ActiveRecord::RecordNotFound
-      render json: { message: 'Trade Not Found' }, status: 404
-    end
+   
 
     # Specifiy Content-Type: application/json then pass it as array
     def create
@@ -226,6 +133,8 @@ module Api
         if !(roster.nil? || stat.nil?)
           container << { player_name: player.player_name, player_key: player.player_key,
                          player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat }
+          else
+            container << dropped(player)
         end
       end
       container
