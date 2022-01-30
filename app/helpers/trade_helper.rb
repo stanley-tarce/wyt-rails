@@ -74,6 +74,7 @@ module TradeHelper
       end
       container
     end
+    
 
     def dropped(player)
       { player_name: 'Dropped', player_key: player.player_key, player_team_full: '-', player_team_abbr: '-', player_number: '-', player_positions: '-', player_image: '-', stats: {
