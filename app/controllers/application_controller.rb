@@ -57,6 +57,8 @@ class ApplicationController < ActionController::API
 
   def updated_token_from_trade_params
     current_user_from_trade_params.refresh_token_from_trade_params
+  rescue NoMethodError
+    render json: { error: 'Trade Not Found' }, status: 404
   end
 
 

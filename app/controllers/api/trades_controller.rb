@@ -9,6 +9,21 @@ module Api
       render json: trades.by_ascending, status: :ok
     end
 
+    def show_v2
+      token = updated_token_from_trade_params
+      league = Yahoo::Client.league(token, trade.league.league_key)
+      user = roster_stats(trade.league.team_key, trade.league.league_key, token)
+      partner = roster_stats(trade.team_key, trade.league.league_key, token)
+      players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
+      players_to_send = organized_roster_from_db(trade.sent_players, user)
+      player_to_receive = organized_roster_from_db(trade.received_players, partner)
+      user_other_roster = organized_roster_from_api(user, players_array)
+      partner_other_roster = organized_roster_from_api(partner, players_array)
+      out = { id: trade.id, league_name: trade.league.league_name, user_team_name: trade.league.team_name,
+              user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: partner_other_roster, league: league[:data][:league] }
+      render json: out, status: :ok
+    end
+
     def show
       token = updated_token_from_trade_params
       league = Yahoo::Client.league(token, trade.league.league_key)
@@ -178,6 +193,63 @@ module Api
 
     def trade_params
       params.require(:trade).permit(:team_key, :team_name, :team_logo)
+    end
+
+    def roster_stats(team_key, league_key, token)
+      roster = []
+      response_roster = Yahoo::Client.players(token, team_key)
+      stats = Yahoo::Client.player_stats(token, league_key,
+                                         response_roster[:data][:players].pluck(:player_key).join(','))
+      if response_roster[:data][:players].present? && stats[:data][:player_stats].present?
+        { roster: response_roster[:data][:players],
+          stats: stats[:data][:player_stats] }
+      end
+    rescue StandardError
+    end
+
+    def organized_roster_from_db(trade, user)
+      return {} unless trade.present? && user.present?
+
+      container = []
+      trade.each do |player|
+        stat = begin
+          user[:stats].find do |stat|
+            stat['player_key'] == player.player_key
+          end.except('player_key')
+        rescue StandardError
+          user[:stats].find do |stat|
+            stat['player_key'] == player.player_key
+          end
+        end
+        roster = user[:roster].find { |roster| roster['player_key'] == player.player_key }
+        unless roster.nil? || stat.nil?
+          container << { player_name: player.player_name, player_key: player.player_key,
+                         player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat }
+        end
+      end
+      container
+    end
+
+    def organized_roster_from_api(user, _keys_from_db)
+      return {} unless trade.present? && user.present?
+
+      container = []
+      user[:roster].each do |player|
+        next if key_from_db.include? player[:player_key].to_s
+
+        stat = begin
+          user[:stats].find do |stat|
+            stat['player_key'] == player[:player_key]
+          end.except('player_key')
+        rescue StandardError
+          user[:stats].find do |stat|
+            stat['player_key'] == player[:player_key]
+          end
+        end
+        container << { player_name: player[:player_key], player_key: player[:player_name],
+                       player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: stat }
+      end
+      container
     end
 
     def dropped(player)
