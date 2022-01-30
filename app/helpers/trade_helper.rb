@@ -1,5 +1,5 @@
-module Roster
-     def roster_stats(team_key, league_key, token)
+module TradeHelper
+    def roster_stats(team_key, league_key, token)
       roster = []
       response_roster = Yahoo::Client.players(token, team_key)
       stats = Yahoo::Client.player_stats(token, league_key,

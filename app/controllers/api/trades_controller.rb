@@ -12,8 +12,8 @@ module Api
     def show
       token = updated_token_from_trade_params
       league = Yahoo::Client.league(token, trade.league.league_key)
-      user = Roster::roster_stats(trade.league.team_key, trade.league.league_key, token)
-      partner = Roster::roster_stats(trade.team_key, trade.league.league_key, token)
+      user = helpers.roster_stats(trade.league.team_key, trade.league.league_key, token)
+      partner = helpers.roster_stats(trade.team_key, trade.league.league_key, token)
       players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
       players_to_send = organized_roster_from_db(trade.sent_players, user)
       players_to_receive = organized_roster_from_db(trade.received_players, partner)
