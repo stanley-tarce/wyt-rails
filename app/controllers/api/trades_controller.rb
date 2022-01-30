@@ -2,6 +2,7 @@
 
 module Api
   class TradesController < ApplicationController
+    include Roster
     prepend_before_action :authenticate_user!, only: %i[index create owner delete update]
     before_action :check_token, only: %i[index create owner delete update] # Order
     append_before_action :set_response_header, only: %i[index create owner delete update]
@@ -104,17 +105,7 @@ module Api
       params.require(:trade).permit(:team_key, :team_name, :team_logo)
     end
 
-    def roster_stats(team_key, league_key, token)
-      roster = []
-      response_roster = Yahoo::Client.players(token, team_key)
-      stats = Yahoo::Client.player_stats(token, league_key,
-                                         response_roster[:data][:players].pluck(:player_key).join(','))
-      if response_roster[:data][:players].present? && stats[:data][:player_stats].present?
-        { roster: response_roster[:data][:players],
-          stats: stats[:data][:player_stats] }
-      end
-    rescue StandardError
-    end
+   
 
     def organized_roster_from_db(trade, user)
       return [] if trade.nil? && user.nil?
