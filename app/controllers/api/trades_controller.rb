@@ -16,7 +16,7 @@ module Api
       partner = roster_stats(trade.team_key, trade.league.league_key, token)
       players_array = trade.sent_players.pluck(:player_key).concat(trade.received_players.pluck(:player_key))
       players_to_send = organized_roster_from_db(trade.sent_players, user)
-      player_to_receive = organized_roster_from_db(trade.received_players, partner)
+      players_to_receive = organized_roster_from_db(trade.received_players, partner)
       user_other_roster = organized_roster_from_api(user, players_array)
       partner_other_roster = organized_roster_from_api(partner, players_array)
       out = { id: trade.id, league_name: trade.league.league_name, user_team_name: trade.league.team_name,
