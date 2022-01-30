@@ -19,6 +19,8 @@ module Api
       players_to_receive = organized_roster_from_db(trade.received_players, partner)
       user_other_roster = organized_roster_from_api(user, players_array)
       partner_other_roster = organized_roster_from_api(partner, players_array)
+      puts players_to_send
+      puts players_to_receive
       out = { id: trade.id, league_name: trade.league.league_name, user_team_name: trade.league.team_name,
               user_team_key: trade.league.team_key, totrade_team_name: trade.team_name, totrade_team_key: trade.team_key, totrade_team_logo: trade.team_logo, players_to_send: players_to_send, players_to_receive: players_to_receive, user_other_rosters: user_other_roster, totrade_other_rosters: partner_other_roster, league: league[:data][:league] }
       render json: out, status: :ok
