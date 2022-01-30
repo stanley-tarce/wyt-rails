@@ -230,12 +230,12 @@ module Api
       container
     end
 
-    def organized_roster_from_api(user, _keys_from_db)
+    def organized_roster_from_api(user, keys_from_db)
       return {} unless trade.present? && user.present?
 
       container = []
       user[:roster].each do |player|
-        next if key_from_db.include? player[:player_key].to_s
+        next if keys_from_db.include? player[:player_key].to_s
 
         stat = begin
           user[:stats].find do |stat|
