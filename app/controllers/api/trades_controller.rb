@@ -248,7 +248,7 @@ module Api
             stat['player_key'] == player[:player_key]
           end
         end
-        container << { player_name: player[:player_key], player_key: player[:player_name],
+        container << { player_key: player[:player_key], player_name: player[:player_name],
                        player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: stat }
       end
       container
