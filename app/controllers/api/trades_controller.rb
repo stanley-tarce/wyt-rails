@@ -2,7 +2,7 @@
 
 module Api
   class TradesController < ApplicationController
-    helper TradeHelper
+    include TradeHelper
     prepend_before_action :authenticate_user!, only: %i[index create owner delete update]
     before_action :check_token, only: %i[index create owner delete update] # Order
     append_before_action :set_response_header, only: %i[index create owner delete update]
