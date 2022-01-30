@@ -221,13 +221,15 @@ module Api
             stat['player_key'] == player.player_key
           end
         end
+        puts stat
         roster = user[:roster].find { |roster| roster['player_key'] == player.player_key }
+        puts roster
         if !(roster.nil? || stat.nil?)
           container << { player_name: "123", player_key: player.player_key,
                          player_team_full: roster[:player_team_full], player_team_abbr: roster[:player_team_abbr], player_number: roster[:player_number], player_positions: roster[:player_positions], player_image: roster[:player_image], stats: stat }
         end
       end
-      return container
+      container
     end
 
     def organized_roster_from_api(user, keys_from_db)
