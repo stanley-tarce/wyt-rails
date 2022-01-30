@@ -34,6 +34,25 @@ module TradeHelper
       container
     end
 
+    def organized_default_roster(user)
+        out = []
+        player_info = user[:roster]
+        player_stats = user[:stats]
+      player_info.each do |player|
+         stat = begin
+          player_stats.find do |stat|
+            stat['player_key'] == player[:player_key]
+          end.except('player_key')
+        rescue StandardError
+          player_stats.find do |stat|
+            stat['player_key'] == player[:player_key]
+          end
+        end
+        out << {  player_key: player[:player_key], player_name: player[:player_name], player_team_full: player[:player_team_full], player_team_abbr: player[:player_team_abbr], player_number: player[:player_number], player_positions: player[:player_positions], player_image: player[:player_image], stats: stat}
+      end
+      out
+    end
+
     def organized_roster_from_api(user, keys_from_db)
       return [] if keys_from_db.count == 0 && user.nil?
 
