@@ -1,136 +1,98 @@
-# Project Title
 
-WYT-Rails is a Yahoo Fantasy Sports Tool Helper for all the users that wants to ask for an opinion about their current trade. Currently people send it to their friends by a screenshot. One problem here is that, the stats can differ day by day and it can be hard to track all the comments and opinions about the trade if they're going to search it in their chatboxes. Our app solves it by creating a mock trade on our website and the users can send the link to their friends, and non users can judge and share their opinions. Technically, only users with Yahoo Fantasy Teams on NBA are eligible to use most of the features.
 
-## Getting Started
+# WYT
 
+"WYT-Rails" is a Yahoo Fantasy Sports Tool Helper for all the users that wants to ask for an opinion about their current trade. Currently people send it to their friends by screenshot. One problem here is that the stats can differ day by day and it can be hard to track all the comments and opinions about the trade if they're going to search for it in their chat boxes. Our app solves it by creating a mock trade on our website and the users can send the link to their friends, and non-users can judge and share their opinions. Technically, only users with Yahoo Fantasy Teams on NBA are eligible to use most of the features.
+### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Clone the repository inside your local directory and change your directory to the root of the file
+
 ```
 git clone https://github.com/stanley-tarce/wyt-rails.git
+```
+```
 cd wyt-rails
 ```
-
 ### Prerequisites
+Make sure to have Ruby, Rails, NodeJs, Postgresql, and Yarn installed. The versions I used are as listed: 
 
-What things you need to install the software and how to install them
+    Rails 6.1.4.4
+    ruby-3.0.2
+    node v17.0.1
+    yarn 1.22.17
+    psql (PostgreSQL) 14.1 
+  ### Installing
+To get the API running, run the following command  
 
-```
-Give examples
-```
+    bundle install 
+Enable alternate role on Postgresql
 
-### Installing
+    sudo -u postgres psql 
+ Type this in the postresql console
+ 
 
-A step by step series of examples that tell you how to get a development env running
+    ALTER USER postgres WITH PASSWORD 'postgres;
+    
 
-Say what the step will be
+Setup the database by running this command
 
-```
-Give the example
-```
+    rails db:setup
 
-And repeat
+Or you can run this
 
-```
-until finished
-```
+    rails db:create db:migrate 
 
-End with an example of getting some data out of the system or using it for a little demo
+For the authentication to work, you could create your own secret key by running this command on your terminal and save it to your .env file
 
-## Running the tests
+    rails secret
+    touch .env 
+On your .env file, add the following line:
 
-Explain how to run the automated tests for this system
+    DEVISE_JWT_SECRET_KEY=<"YOUR_SECRET_KEY_FROM_RAILS_SECRET">
 
-### Break down into end to end tests
+ To check the routes use this command
+ 
 
-Explain what these tests test and why
+    rails routes 
+### Server 
+Enable the server by running this command 
 
-```
-Give an example
-```
+    rails s 
+or you could run on a different server  
 
-### And coding style tests
+    rails s -p <YOUR_CUSTOM_SERVER> *example 3001
 
-Explain what these tests test and why
+### RSpec Test
+To run the test, simply do the following: 
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+    rails db:migrate RAILS_ENV=test
+    rspec spec
+I only checked the validity and the request endpoints for the tests since it's an api only application. 
 
 
+        it 'is expected to create a new user without issues'  do
+    
+    expect(response).to  have_http_status(:success)
+    
+    end
+    
+      
+    
+    it 'is expected to have a message inside the body'  do
+    
+    (expect(response.body.include?('User Successfully Created')).to be true)
+    
+    end
+    
+      
+    
+    it 'is expected to login a user without issues'  do
+    
+    post '/login', params: sign_up[:user].except(:password_confirmation)
+    
+    expect(response).to  have_http_status(:success)
+    
+    end
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
