@@ -6,7 +6,7 @@ WYT-Rails is a Yahoo Fantasy Sports Tool Helper for all the users that wants to 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-# Clone the repository inside your local directory and change your directory to the root of the file
+Clone the repository inside your local directory and change your directory to the root of the file
 ```
 git clone https://github.com/stanley-tarce/wyt-rails.git
 cd wyt-rails
