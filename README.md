@@ -66,7 +66,8 @@ To run the test, simply do the following:
     rspec spec or bundle exec rspec spec
 I used VCR to capture API Request because the total run of my test before was 3 minutes. Applying this method gave me 10 seconds to run 
 ### Rspec Result 
- Finished in 22.05 seconds (files took 5.25 seconds to load) 84 examples, 0 failures
+ Finished in 13.24 seconds (files took 2.2 seconds to load)
+84 examples, 0 failures
 ### Deployment
 To deploy to production, simply create an heroku account and run this on the terminal 
 
