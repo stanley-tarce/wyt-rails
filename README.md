@@ -3,6 +3,10 @@
 # WYT
 
 "WYT-Rails" is a Yahoo Fantasy Sports Tool Helper for all the users that wants to ask for an opinion about their current trade. Currently people send it to their friends by screenshot. One problem here is that the stats can differ day by day and it can be hard to track all the comments and opinions about the trade if they're going to search for it in their chat boxes. Our app solves it by creating a mock trade on our website and the users can send the link to their friends, and non-users can judge and share their opinions. Technically, only users with Yahoo Fantasy Teams on NBA are eligible to use most of the features.
+
+### Frontend Repository
+To access the frontend repository click this [link](https://github.com/ajong1994/wyt-react) 
+
 ### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -43,14 +47,6 @@ Or you can run this
 
     rails db:create db:migrate 
 
-For the authentication to work, you could create your own secret key by running this command on your terminal and save it to your .env file
-
-    rails secret
-    touch .env 
-On your .env file, add the following line:
-
-    DEVISE_JWT_SECRET_KEY=<"YOUR_SECRET_KEY_FROM_RAILS_SECRET">
-
  To check the routes use this command
  
 
@@ -67,32 +63,15 @@ or you could run on a different server
 To run the test, simply do the following: 
 
     rails db:migrate RAILS_ENV=test
-    rspec spec
-I only checked the validity and the request endpoints for the tests since it's an api only application. 
+    rspec spec or bundle exec rspec spec
+I used VCR to capture API Request because the total run of my test before was 3 minutes. Applying this method gave me 10 seconds to run 
+### Rspec Result 
+ Finished in 22.05 seconds (files took 5.25 seconds to load) 84 examples, 0 failures
+### Deployment
+To deploy to production, simply create an heroku account and run this on the terminal 
 
-
-        it 'is expected to create a new user without issues'  do
-    
-    expect(response).to  have_http_status(:success)
-    
-    end
-    
-      
-    
-    it 'is expected to have a message inside the body'  do
-    
-    (expect(response.body.include?('User Successfully Created')).to be true)
-    
-    end
-    
-      
-    
-    it 'is expected to login a user without issues'  do
-    
-    post '/login', params: sign_up[:user].except(:password_confirmation)
-    
-    expect(response).to  have_http_status(:success)
-    
-    end
-    
-
+    heroku create
+    heroku rename <YOUR_CHOSEN_NAME>
+    git add -A 
+    git commit -m <MESSAGE>
+    git push heroku 
