@@ -1,11 +1,15 @@
 
 
+
 # WYT
 
 "WYT-Rails" is a Yahoo Fantasy Sports Tool Helper for all the users that wants to ask for an opinion about their current trade. Currently people send it to their friends by screenshot. One problem here is that the stats can differ day by day and it can be hard to track all the comments and opinions about the trade if they're going to search for it in their chat boxes. Our app solves it by creating a mock trade on our website and the users can send the link to their friends, and non-users can judge and share their opinions. Technically, only users with Yahoo Fantasy Teams on NBA are eligible to use most of the features.
 
 ### Frontend Repository
 To access the frontend repository click this [link](https://github.com/ajong1994/wyt-react) 
+
+### Live/Demo
+Please use this [link](https://wyt-react.vercel.app/) to access the app
 
 ### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -65,9 +69,8 @@ To run the test, simply do the following:
     rails db:migrate RAILS_ENV=test
     rspec spec or bundle exec rspec spec
 I used VCR to capture API Request because the total run of my test before was 3 minutes. Applying this method gave me 10 seconds to run 
-### Rspec Result 
- Finished in 13.24 seconds (files took 2.2 seconds to load)
-84 examples, 0 failures
+**RSpec Result:**
+ *Finished in 22.05 seconds (files took 5.25 seconds to load) 84 examples, 0 failures*
 ### Deployment
 To deploy to production, simply create an heroku account and run this on the terminal 
 
